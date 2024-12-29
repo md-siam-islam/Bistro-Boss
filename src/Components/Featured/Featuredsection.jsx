@@ -14,7 +14,7 @@ const Featuredsection = () => {
               title={"FROM OUR MENU"}
             ></Sheared>
           </div>
-          <div className="flex flex-col md:flex-row items-center justify-center gap-5 py-28 px-20 ">
+          <div className="flex flex-col md:flex-row items-center justify-center gap-5 py-10 px-20 ">
             <div className="w-2/5">
               <img src={img} alt="" />
             </div>
