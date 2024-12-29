@@ -2,7 +2,7 @@ import React from 'react';
 
 const Bisrto = () => {
     return (
-        <div className='my-20 bg-img py-14 px-10 h-[700px] bg-center bg-no-repeat flex items-center '>
+        <div className='my-36 bg-img py-14 px-10 h-[700px] bg-center bg-no-repeat flex items-center '>
             <div className='bg-white py-16 px-5 '>
                 <h1 className='text-2xl md:text-4xl font-bold my-5 text-center'>
                 Bistro Boss
