@@ -3,23 +3,24 @@ import Sheared from '../../ShearedSEction/Sheared';
 import salad from "../../assets/home/salad-bg.jpg"
 
 const Recomends = () => {
-    const sampleItems = [
-        {
+    
+    // const sampleItems = [
+    //     {
            
-            name: 'Caesar Salad',
-            recipe: 'Lettuce, Eggs, Parmesan Cheese, Chicken Breast Fillets.',
-        },
-        {
+    //         name: 'Caesar Salad',
+    //         recipe: 'Lettuce, Eggs, Parmesan Cheese, Chicken Breast Fillets.',
+    //     },
+    //     {
            
-            name: 'Grilled Salmon',
-            recipe: 'Fresh Salmon with Vegetables and Lemon Dressing.',
-        },
-        {
+    //         name: 'Grilled Salmon',
+    //         recipe: 'Fresh Salmon with Vegetables and Lemon Dressing.',
+    //     },
+    //     {
             
-            name: 'Pasta Primavera',
-            recipe: 'Pasta with Fresh Vegetables in Creamy Sauce.',
-        },
-    ];
+    //         name: 'Pasta Primavera',
+    //         recipe: 'Pasta with Fresh Vegetables in Creamy Sauce.',
+    //     },
+    // ];
 
     return (
         <div className="my-36">
