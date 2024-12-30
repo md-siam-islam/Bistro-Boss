@@ -2,26 +2,31 @@ import React, { useEffect, useState } from "react";
 import Menu from "../../ShearedSEction/Menu/Menu";
 import Sheared from "../../ShearedSEction/Sheared";
 import { Link } from "react-router-dom";
+import useHook from "../../Hooks/Usehooks";
 
 const Popularitem = () => {
-  const [menu, setMenu] = useState([]);
 
-  useEffect(() => {
-    fetch("Menu.json")
-      .then((res) => res.json())
-      .then((data) => {
-        console.log(data);
-        const PopulerItem = data.filter((data) => data.category == "popular");
-        setMenu(PopulerItem);
-      });
-  }, []);
+  const [menu] = useHook()
+
+  const PopulerItem = menu.filter((menu) => menu.category == "popular");
+  // const [menu, setMenu] = useState([]);
+
+  // useEffect(() => {
+  //   fetch("Menu.json")
+  //     .then((res) => res.json())
+  //     .then((data) => {
+  //       console.log(data);
+  //       const PopulerItem = data.filter((data) => data.category == "popular");
+  //       setMenu(PopulerItem);
+  //     });
+  // }, []);
   return (
     <div className="my-32 items-center">
         <Sheared Subtitle={"Check it out"} title={"FROM OUR MENU"}>
 
         </Sheared>
       <div className="grid md:grid-cols-2 items-center">
-        {menu.map((item) => (
+        {PopulerItem.map((item) => (
           <Menu item={item}></Menu>
         ))}
       </div>
