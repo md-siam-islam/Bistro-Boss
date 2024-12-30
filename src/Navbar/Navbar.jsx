@@ -35,6 +35,11 @@ const Navbar = () => {
                 <NavLink to="/">HOME</NavLink>
               </li>
               <li>
+              <NavLink to="/menu" className="px-3 font-bold">
+                OUR MENU
+              </NavLink>
+            </li>
+              <li>
               <NavLink to="/contact" className="px-3 font-bold">
                 CONTACT US
               </NavLink>
@@ -44,11 +49,7 @@ const Navbar = () => {
                 DASHBOARD
               </NavLink>
             </li>
-            <li>
-              <NavLink to="/menu" className="px-3 font-bold">
-                OUR MENU
-              </NavLink>
-            </li>
+           
             <li>
               <NavLink to="/shop" className="px-3 font-bold">
                 OUR SHOP
@@ -69,6 +70,11 @@ const Navbar = () => {
               </NavLink>
             </li>
             <li>
+              <NavLink to="/menu" className="px-3 font-bold">
+                OUR MENU
+              </NavLink>
+            </li>
+            <li>
               <NavLink to="/contact" className="px-3 font-bold">
                 CONTACT US
               </NavLink>
@@ -78,11 +84,7 @@ const Navbar = () => {
                 DASHBOARD
               </NavLink>
             </li>
-            <li>
-              <NavLink to="/menu" className="px-3 font-bold">
-                OUR MENU
-              </NavLink>
-            </li>
+            
             <li>
               <NavLink to="/shop" className="px-3 font-bold">
                 OUR SHOP
