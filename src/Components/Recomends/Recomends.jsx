@@ -55,6 +55,7 @@ const Recomends = () => {
                         </div>
                        </div>
                     </div>
+                    
                     <div
                         className="w-80 bg-white shadow-md rounded-lg overflow-hidden hover:shadow-lg transition duration-300">
                         <img

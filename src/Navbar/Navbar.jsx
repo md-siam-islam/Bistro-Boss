@@ -75,6 +75,11 @@ const Navbar = () => {
               </NavLink>
             </li>
             <li>
+              <NavLink to="/shop" className="px-3 font-bold">
+                OUR SHOP
+              </NavLink>
+            </li>
+            <li>
               <NavLink to="/contact" className="px-3 font-bold">
                 CONTACT US
               </NavLink>
@@ -85,11 +90,7 @@ const Navbar = () => {
               </NavLink>
             </li>
             
-            <li>
-              <NavLink to="/shop" className="px-3 font-bold">
-                OUR SHOP
-              </NavLink>
-            </li>
+           
           </ul>
         </div>
         <div className="navbar-end">
