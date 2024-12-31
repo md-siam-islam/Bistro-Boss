@@ -8,6 +8,7 @@ import Main from './Main/Main'
 import Home from './Home/Home'
 import Menu from './Page/OurmenuSection/Menu'
 import Shop from './Page/Ourshopesection/Shop/Shop'
+import Contact from './Page/ContactSection/Contact'
 
 
 const router = createBrowserRouter([
@@ -26,6 +27,10 @@ const router = createBrowserRouter([
       {
         path:'/shop/:category',
         element:<Shop></Shop>
+      },
+      {
+        path:'/contact',
+        element:<Contact></Contact>
       }
     ]
   }
