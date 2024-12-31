@@ -1,14 +1,16 @@
+import axios from "axios";
 import { useEffect, useState } from "react";
 
 const useHook = () => {
     const [menu,setMenu] = useState([])
     useEffect(() => {
-        fetch("Menu.json")
-          .then((res) => res.json())
-          .then((data) => {
-            
-            setMenu(data);
-          });
+
+        axios.get("http://localhost:5000/menu")
+        .then((res) => {
+        const menuData = res.data
+        setMenu(menuData);
+        })
+      
       }, []);
 
       return [menu]
