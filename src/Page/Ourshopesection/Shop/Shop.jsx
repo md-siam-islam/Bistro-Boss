@@ -5,15 +5,22 @@ import { Tab ,TabList,TabPanel, Tabs} from "react-tabs";
 import 'react-tabs/style/react-tabs.css';
 import useHook from "../../../Hooks/Usehooks";
 import ShopCard from "../../../ShearedSEction/ShopFoodCard/ShopCard";
+import { useParams } from "react-router-dom";
 
 const Shop = () => {
-    const [tabIndex, setTabIndex] = useState(0);
+  const {category} = useParams()
+  const categoryse = ['salad',"pizza","soup","dessert","drinks"]
+
+  const initialIndex = categoryse.indexOf(category)
+    const [tabIndex, setTabIndex] = useState(initialIndex);
     const [menu] =useHook()
     const dessert = menu.filter((data) => data.category == "dessert");
     const salad = menu.filter((data) => data.category == "salad");
     const soup = menu.filter((data) => data.category == "soup");
     const pizza = menu.filter((data) => data.category == "pizza");
     const drinks = menu.filter((data) => data.category == "drinks");
+
+    
   return (
     <div>
       <Cover title={"our shop"} img={shopeBg}></Cover>

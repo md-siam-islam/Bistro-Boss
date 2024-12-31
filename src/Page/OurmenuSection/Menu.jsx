@@ -22,9 +22,9 @@ const Menu = () => {
             <Cover img={img} title={"our menu"}></Cover>
             <Sheared Subtitle={"Dont miss"} title={"TODAY'S OFFER"}></Sheared>
             <Menucategory items={dessert}></Menucategory>
-            <Menucategory items={salad} img={saladImg} title={"SALADS"}></Menucategory>
-            <Menucategory items={pizza} img={pizzaImg} title={"PIZZA"}></Menucategory>
-            <Menucategory items={soup} img={soupImg} title={"SOUP"}></Menucategory>
+            <Menucategory items={salad} img={saladImg} title={"salad"}></Menucategory>
+            <Menucategory items={pizza} img={pizzaImg} title={"pizza"}></Menucategory>
+            <Menucategory items={soup} img={soupImg} title={"soup"}></Menucategory>
             
             
         </div>
