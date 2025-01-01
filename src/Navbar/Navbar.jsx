@@ -1,7 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import { NavLink } from "react-router-dom";
+import { Authcontext } from "../AuthProvider/Authprovider";
 
 const Navbar = () => {
+  const { user,Usersignout } = useContext(Authcontext);
+
+
   return (
     <div>
       <div className="navbar bg-black fixed z-50 bg-opacity-50 w-11/12 mx-auto text-white">
@@ -35,27 +39,22 @@ const Navbar = () => {
                 <NavLink to="/">HOME</NavLink>
               </li>
               <li>
-              <NavLink to="/menu" className="px-3 font-bold">
-                OUR MENU
-              </NavLink>
-            </li>
+                <NavLink to="/menu" className="px-3 font-bold">
+                  OUR MENU
+                </NavLink>
+              </li>
               <li>
-              <NavLink to="/contact" className="px-3 font-bold">
-                CONTACT US
-              </NavLink>
-            </li>
-            <li>
-              <NavLink to="/dashboard" className="px-3 font-bold">
-                DASHBOARD
-              </NavLink>
-            </li>
-           
-            <li>
-              <NavLink to="/shop/salad" className="px-3 font-bold">
-                OUR SHOP
-              </NavLink>
-            </li>
-              
+                <NavLink to="/contact" className="px-3 font-bold">
+                  CONTACT US
+                </NavLink>
+              </li>
+          
+
+              <li>
+                <NavLink to="/shop/salad" className="px-3 font-bold">
+                  OUR SHOP
+                </NavLink>
+              </li>
             </ul>
           </div>
           <NavLink to="/" className="btn btn-ghost text-xl">
@@ -84,20 +83,42 @@ const Navbar = () => {
                 CONTACT US
               </NavLink>
             </li>
-            <li>
-              <NavLink to="/dashboard" className="px-3 font-bold">
-                DASHBOARD
-              </NavLink>
-            </li>
             
-           
           </ul>
         </div>
 
         {/* Navber end section */}
         <div className="navbar-end gap-3">
-          <NavLink to={"/login"} className="btn bg-[#dd9932b3] hover:bg-emerald-700">Login</NavLink>
-          <NavLink to={"/signup"} className="btn bg-[#da9938b3] hover:bg-emerald-700">Sign Up</NavLink>
+          {user && user?.email ? (
+           <div className="flex items-center gap-4">
+            <img
+                className="w-10 h-10 rounded-full border-2 border-blue-700"
+                src={user.photoURL}
+                alt="User Avatar"/>
+            <NavLink
+            onClick={Usersignout}
+                
+                className="btn bg-[#dd9932b3] hover:bg-emerald-700 font-bold text-white"
+              >
+                Logout
+              </NavLink>
+           </div>
+          ) : (
+            <div className="flex gap-3">
+              <NavLink
+                to={"/login"}
+                className="btn bg-[#dd9932b3] hover:bg-emerald-700 font-bold text-white"
+              >
+                Login
+              </NavLink>
+              <NavLink
+                to={"/signup"}
+                className="btn bg-[#da9938b3] hover:bg-emerald-700 font-bold text-white"
+              >
+                Sign Up
+              </NavLink>
+            </div>
+          )}
         </div>
       </div>
     </div>

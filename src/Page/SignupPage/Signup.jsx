@@ -5,20 +5,44 @@ import Swal from "sweetalert2";
 
 const Signup = () => {
   const navigate = useNavigate()
-  const {userSignup,setUser} = useContext(Authcontext)
+  const {userSignup,setUser,userInfo} = useContext(Authcontext)
   const handleSignup = (event) => {
     event.preventDefault();
     const name = event.target.name.value
+    const photo = event.target.photo.value
     const email = event.target.email.value;
     const password = event.target.password.value;
 
-    const user = { email, password };
-    console.log("User data:", user);
+    if(password.length<6){
+      return Swal.fire({
+        position: "top-center",
+        icon: "error",
+        title:"Password must be at least 6 characters long",
+        showConfirmButton: false,
+        timer: 1500
+      });
+    }
+
+    const passwordPattern =
+    /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{6,}$/;
+
+
+    if(!passwordPattern.test(password)){
+      return Swal.fire({
+        position: "top-center",
+        icon: "error",
+        title:"Password is not strong enough.",
+        showConfirmButton: false,
+        timer: 1500
+      });
+    }
+
 
 
     userSignup(email,password)
     .then((userCredential) => {
       const user = userCredential.user
+      userInfo({displayName: name, photoURL: photo})
       setUser(user)
       event.target.reset()
       navigate('/')
@@ -49,6 +73,8 @@ const Signup = () => {
         <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
           <h1 className="text-3xl text-center my-2 font-bold">Sign Up now!</h1>
           <form onSubmit={handleSignup} className="card-body">
+
+
             <div className="form-control">
               <label className="label">
                 <span className="label-text">Name</span>
@@ -57,6 +83,19 @@ const Signup = () => {
                 type="text"
                 name="name"
                 placeholder="Enter Your Name"
+                className="input input-bordered"
+                required
+              />
+            </div>
+
+            <div className="form-control">
+              <label className="label">
+                <span className="label-text">Photo Url</span>
+              </label>
+              <input
+                type="text"
+                name="photo"
+                placeholder="Enter Your Photo Url"
                 className="input input-bordered"
                 required
               />
