@@ -93,8 +93,11 @@ const Navbar = () => {
            
           </ul>
         </div>
-        <div className="navbar-end">
-          <button className="btn">Button</button>
+
+        {/* Navber end section */}
+        <div className="navbar-end gap-3">
+          <NavLink to={"/login"} className="btn">Login</NavLink>
+          <NavLink to={"/signup"} className="btn">Sign Up</NavLink>
         </div>
       </div>
     </div>
