@@ -96,8 +96,8 @@ const Navbar = () => {
 
         {/* Navber end section */}
         <div className="navbar-end gap-3">
-          <NavLink to={"/login"} className="btn">Login</NavLink>
-          <NavLink to={"/signup"} className="btn">Sign Up</NavLink>
+          <NavLink to={"/login"} className="btn bg-[#dd9932b3] hover:bg-emerald-700">Login</NavLink>
+          <NavLink to={"/signup"} className="btn bg-[#da9938b3] hover:bg-emerald-700">Sign Up</NavLink>
         </div>
       </div>
     </div>

@@ -1,19 +1,11 @@
-import { useEffect, useRef, useState } from "react";
-import SideImg from "../../assets/others/authentication1.png"
-import {
-  loadCaptchaEnginge,
-  LoadCanvasTemplate,
-  validateCaptcha,
-} from "react-simple-captcha";
+import { useContext, useState } from "react";
+import SideImg from "../../assets/others/authentication1.png";
 import { Link } from "react-router-dom";
+import { Authcontext } from "../../AuthProvider/Authprovider";
+import Swal from "sweetalert2";
 
 const Login = () => {
-    const [daisble, setDisable] = useState(true)
-    const captchaRef = useRef(null)
- 
-  useEffect(() => {
-    loadCaptchaEnginge(6); 
-  }, []);
+  const { userLogin, setUser } = useContext(Authcontext);
 
   const handleLogin = (event) => {
     event.preventDefault();
@@ -21,28 +13,37 @@ const Login = () => {
     const email = event.target.email.value;
     const password = event.target.password.value;
 
-    const user = { email, password };
-    console.log("User data:", user);
+    userLogin(email, password)
+  .then((userCredential) => {
+    const UserData = userCredential.user;
+    setUser(UserData);
+    event.target.reset();
+    Swal.fire({
+      position: "top-center",
+      icon: "success",
+      title: "User Login Successful",
+      showConfirmButton: false,
+      timer: 1500,
+    });
+  })
+  .catch((error) => {
+    const errorMessage = error.message || "Something went wrong. Please try again.";
+    Swal.fire({
+      position: "top-end",
+      icon: "error",
+      title: errorMessage,
+      showConfirmButton: false,
+      timer: 1500,
+    });
+  });
+
 
   };
-
-
-  const haldleCaptcha = () => {
-    const value = captchaRef.current.value
-
-    if(validateCaptcha(value)){
-        setDisable(false)
-    }
-    else{
-        setDisable(true)
-    }
-
-  }
 
   return (
     <div className="bg-img3 my-20 py-16 px-12 flex flex-col lg:flex-row items-center justify-center gap-5">
       <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
-      <h1 className="text-3xl text-center my-2 font-bold">Login now!</h1>
+        <h1 className="text-3xl text-center my-2 font-bold">Login now!</h1>
         <form onSubmit={handleLogin} className="card-body">
           {/* Email Input */}
           <div className="form-control">
@@ -72,28 +73,17 @@ const Login = () => {
             />
           </div>
 
-          {/* Captcha Section */}
-          <div className="form-control">
-            <label className="label">
-              <LoadCanvasTemplate />
-            </label>
-            <input
-              type="text"
-              ref={captchaRef}
-              name="captcha"
-              placeholder="Captcha"
-              className="input input-bordered"
-              required
-            />
-            <button onClick={haldleCaptcha} className="btn btn-outline btn-success my-2">Validet Captcha</button>
-          </div>
-
           {/* Submit Button */}
           <div className="form-control mt-6">
-            <button disabled={daisble} className="btn bg-[#D1A054B3]">Login</button>
+            <button className="btn bg-[#D1A054B3]">Login</button>
           </div>
 
-          <p className="my-2 text-center text-[#D1A054B3]">Already registered? Go to <Link className="text-green-600" to={'/signup'}>Sign Up</Link></p>
+          <p className="my-2 text-center text-[#D1A054B3]">
+            Already registered? Go to{" "}
+            <Link className="text-green-600" to={"/signup"}>
+              Sign Up
+            </Link>
+          </p>
         </form>
       </div>
     </div>
