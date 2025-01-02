@@ -1,6 +1,6 @@
 import { useContext, useState } from "react";
 import SideImg from "../../assets/others/authentication1.png";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Authcontext } from "../../AuthProvider/Authprovider";
 import Swal from "sweetalert2";
 
@@ -8,6 +8,7 @@ const Login = () => {
   const { userLogin, setUser } = useContext(Authcontext);
 
   const navigate = useNavigate()
+  const location = useLocation()
 
   const handleLogin = (event) => {
     event.preventDefault();
@@ -27,7 +28,7 @@ const Login = () => {
       showConfirmButton: false,
       timer: 1500,
     });
-    navigate("/")
+    navigate(location.state || "/")
   })
   .catch((error) => {
     const errorMessage = error.message || "Something went wrong. Please try again.";

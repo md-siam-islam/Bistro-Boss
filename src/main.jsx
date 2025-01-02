@@ -11,6 +11,11 @@ import Contact from "./Page/ContactSection/Contact";
 import Login from "./Page/Login/Login";
 import Authprovider from "./AuthProvider/Authprovider";
 import Signup from "./Page/SignupPage/Signup";
+import Privet from "./PrivetRoute/Privet";
+
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+
+const queryClient = new QueryClient();
 
 const router = createBrowserRouter([
   {
@@ -23,7 +28,11 @@ const router = createBrowserRouter([
       },
       {
         path: "/menu",
-        element: <Menu></Menu>,
+        element: (
+          <Privet>
+            <Menu></Menu>
+          </Privet>
+        ),
       },
       {
         path: "/shop/:category",
@@ -40,17 +49,19 @@ const router = createBrowserRouter([
     element: <Login></Login>,
   },
   {
-    path:"/signup",
-    element:<Signup></Signup>
-  }
+    path: "/signup",
+    element: <Signup></Signup>,
+  },
 ]);
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <Authprovider>
-      <div className="w-11/12 mx-auto">
-        <RouterProvider router={router}></RouterProvider>
-      </div>
+      <QueryClientProvider client={queryClient}>
+        <div className="w-11/12 mx-auto">
+          <RouterProvider router={router}></RouterProvider>
+        </div>
+      </QueryClientProvider>
     </Authprovider>
   </StrictMode>
 );

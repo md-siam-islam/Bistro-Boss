@@ -1,9 +1,12 @@
 import React, { useContext } from "react";
 import { NavLink } from "react-router-dom";
 import { Authcontext } from "../AuthProvider/Authprovider";
+import useCart from "../TanstakeHook/useCart";
 
 const Navbar = () => {
   const { user, Usersignout } = useContext(Authcontext);
+
+  const [cart] = useCart()
 
   return (
     <div>
@@ -85,7 +88,7 @@ const Navbar = () => {
               <NavLink>
                 <button className="font-bold flex items-center justify-center gap-1  ">
                   <img className="w-6" src="https://img.icons8.com/?size=48&id=j3XI41kBOIXY&format=png" alt="" />
-                  <div className="badge badge-secondary">+0</div>
+                  <div className="badge badge-secondary">+{cart.length}</div>
                 </button>
               </NavLink>
             </li>

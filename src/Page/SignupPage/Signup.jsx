@@ -1,10 +1,11 @@
 import { useContext } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Authcontext } from "../../AuthProvider/Authprovider";
 import Swal from "sweetalert2";
 
 const Signup = () => {
   const navigate = useNavigate()
+  const location = useLocation()
   const {userSignup,setUser,userInfo} = useContext(Authcontext)
   const handleSignup = (event) => {
     event.preventDefault();
@@ -45,7 +46,7 @@ const Signup = () => {
       userInfo({displayName: name, photoURL: photo})
       setUser(user)
       event.target.reset()
-      navigate('/')
+      navigate(location.state || "/")
       Swal.fire({
         position: "top-end",
         icon: "success",
