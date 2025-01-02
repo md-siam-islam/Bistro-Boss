@@ -3,8 +3,7 @@ import { NavLink } from "react-router-dom";
 import { Authcontext } from "../AuthProvider/Authprovider";
 
 const Navbar = () => {
-  const { user,Usersignout } = useContext(Authcontext);
-
+  const { user, Usersignout } = useContext(Authcontext);
 
   return (
     <div>
@@ -48,7 +47,6 @@ const Navbar = () => {
                   CONTACT US
                 </NavLink>
               </li>
-          
 
               <li>
                 <NavLink to="/shop/salad" className="px-3 font-bold">
@@ -83,26 +81,33 @@ const Navbar = () => {
                 CONTACT US
               </NavLink>
             </li>
-            
+            <li>
+              <NavLink>
+                <button className="font-bold flex items-center justify-center gap-1  ">
+                  <img className="w-6" src="https://img.icons8.com/?size=48&id=j3XI41kBOIXY&format=png" alt="" />
+                  <div className="badge badge-secondary">+0</div>
+                </button>
+              </NavLink>
+            </li>
           </ul>
         </div>
 
         {/* Navber end section */}
         <div className="navbar-end gap-3">
           {user && user?.email ? (
-           <div className="flex items-center gap-4">
-            <img
+            <div className="flex items-center gap-4">
+              <img
                 className="w-10 h-10 rounded-full border-2 border-blue-700"
                 src={user.photoURL}
-                alt="User Avatar"/>
-            <NavLink
-            onClick={Usersignout}
-                
+                alt="User Avatar"
+              />
+              <NavLink
+                onClick={Usersignout}
                 className="btn bg-[#dd9932b3] hover:bg-emerald-700 font-bold text-white"
               >
                 Logout
               </NavLink>
-           </div>
+            </div>
           ) : (
             <div className="flex gap-3">
               <NavLink

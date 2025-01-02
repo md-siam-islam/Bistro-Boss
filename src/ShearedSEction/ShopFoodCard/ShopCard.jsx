@@ -1,7 +1,33 @@
+import axios from "axios";
 import React from "react";
+import Swal from "sweetalert2";
 
 const ShopCard = ({ item }) => {
-  const { name, recipe, image, price } = item;
+  const { name, recipe, image, price, _id } = item;
+
+  const handleCart = (data) => {
+    const menuData = {
+      menuId: _id,
+      name: name,
+      recipe: recipe,
+      image: image,
+      price: price,
+    };
+
+    console.log(menuData);
+
+    axios.post("http://localhost:5000/carts", menuData).then((data) => {
+      if (data.data.insertedId) {
+        Swal.fire({
+          position: "top-end",
+          icon: "success",
+          title: `${name},Add successfull`,
+          showConfirmButton: false,
+          timer: 2500,
+        });
+      }
+    });
+  };
   return (
     <div>
       <div className="w-80 bg-white shadow-md rounded-lg overflow-hidden hover:shadow-lg transition duration-300 relative">
@@ -19,7 +45,10 @@ const ShopCard = ({ item }) => {
           </div>
 
           <div className="p-4 text-center">
-            <button className="w-full text-[#BB8506] font-semibold btn border-b-4 border-[#BB8506] border-0 py-2 px-4 rounded-lg transition duration-300">
+            <button
+              onClick={() => handleCart(item)}
+              className="w-full text-[#BB8506] font-semibold btn border-b-4 border-[#BB8506] border-0 py-2 px-4 rounded-lg transition duration-300"
+            >
               ADD TO CART
             </button>
           </div>
