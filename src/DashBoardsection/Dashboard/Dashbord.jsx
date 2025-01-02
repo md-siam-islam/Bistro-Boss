@@ -5,8 +5,10 @@ import { FaBagShopping } from "react-icons/fa6";
 import { BsBookmarkPlusFill } from "react-icons/bs";
 import { MdReviews } from "react-icons/md";
 import { MdEmail } from "react-icons/md";
+import useCart from '../../TanstakeHook/useCart';
 
 const Dashbord = () => {
+    const [cart] = useCart();
     return (
         <div className='flex gap-8 '>
             <div className='w-64 min-h-screen px-5 py-8 bg-orange-800'>
@@ -15,7 +17,7 @@ const Dashbord = () => {
                         <NavLink to={'/dashboard/home'} className='font-bold my-2 uppercase'> <FaHome></FaHome>User Home</NavLink>
                     </li>
                     <li>
-                        <NavLink to={'/dashboard/cart'} className='font-bold my-2 uppercase'> <FaCartPlus></FaCartPlus>My Cart</NavLink>
+                        <NavLink to={'/dashboard/cart'} className='font-bold my-2 uppercase'> <FaCartPlus></FaCartPlus>My Cart ({cart.length})</NavLink>
                     </li>
                     <li>
                         <NavLink to={'/dashboard/reservation'} className='font-bold my-2 uppercase'> <FaCalendar></FaCalendar>reservation</NavLink>

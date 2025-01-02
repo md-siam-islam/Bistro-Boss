@@ -6,7 +6,7 @@ import useCart from "../TanstakeHook/useCart";
 const Navbar = () => {
   const { user, Usersignout } = useContext(Authcontext);
 
-  const [cart] = useCart()
+  const [cart] = useCart();
 
   return (
     <div>
@@ -85,13 +85,24 @@ const Navbar = () => {
               </NavLink>
             </li>
             <li>
-              <NavLink to={'/dashboard/cart'}>
-                <button className="font-bold flex items-center justify-center gap-1  ">
-                  <img className="w-6" src="https://img.icons8.com/?size=48&id=j3XI41kBOIXY&format=png" alt="" />
-                  <div className="badge badge-secondary">+{cart.length}</div>
-                </button>
+              <NavLink to={"/dashboard/cart"} className="px-3 font-bold">
+                DASHBOARD
               </NavLink>
             </li>
+            {/* <li>
+              <NavLink to={"/dashboard/cart"}>
+                <button className="font-bold flex items-center justify-center relative">
+                  <img
+                    className="w-8"
+                    src="https://img.icons8.com/?size=48&id=j3XI41kBOIXY&format=png"
+                    alt=""
+                  />
+                  <div className="absolute top-0 right-0 bg-red-500 text-white text-xs font-bold rounded-full w-5 h-5 flex items-center justify-center">
+                    {cart.length}
+                  </div>
+                </button>
+              </NavLink>
+            </li> */}
           </ul>
         </div>
 
@@ -99,6 +110,18 @@ const Navbar = () => {
         <div className="navbar-end gap-3">
           {user && user?.email ? (
             <div className="flex items-center gap-4">
+              <NavLink to={"/dashboard/cart"}>
+                <button className="font-bold flex items-center justify-center relative">
+                  <img
+                    className="w-8"
+                    src="https://img.icons8.com/?size=48&id=j3XI41kBOIXY&format=png"
+                    alt=""
+                  />
+                  <div className="absolute top-0 right-0 bg-red-500 text-white text-xs font-bold rounded-full w-5 h-5 flex items-center justify-center">
+                    {cart.length}
+                  </div>
+                </button>
+              </NavLink>
               <img
                 className="w-10 h-10 rounded-full border-2 border-blue-700"
                 src={user.photoURL}
@@ -110,6 +133,7 @@ const Navbar = () => {
               >
                 Logout
               </NavLink>
+              
             </div>
           ) : (
             <div className="flex gap-3">
