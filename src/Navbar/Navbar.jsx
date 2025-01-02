@@ -85,7 +85,7 @@ const Navbar = () => {
               </NavLink>
             </li>
             <li>
-              <NavLink>
+              <NavLink to={'/dashboard/cart'}>
                 <button className="font-bold flex items-center justify-center gap-1  ">
                   <img className="w-6" src="https://img.icons8.com/?size=48&id=j3XI41kBOIXY&format=png" alt="" />
                   <div className="badge badge-secondary">+{cart.length}</div>
