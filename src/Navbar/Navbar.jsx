@@ -84,11 +84,13 @@ const Navbar = () => {
                 CONTACT US
               </NavLink>
             </li>
-            <li>
-              <NavLink to={"/dashboard/cart"} className="px-3 font-bold">
-                DASHBOARD
-              </NavLink>
-            </li>
+           {
+            user ?  <li>
+            <NavLink to={"/dashboard/cart"} className="px-3 font-bold">
+              DASHBOARD
+            </NavLink>
+          </li> : ''
+           }
             {/* <li>
               <NavLink to={"/dashboard/cart"}>
                 <button className="font-bold flex items-center justify-center relative">
