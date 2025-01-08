@@ -1,18 +1,44 @@
 
 import { NavLink, Outlet } from 'react-router-dom';
-import { FaCartPlus,FaHome,FaCalendar,FaWallet ,FaList} from "react-icons/fa";
-import { FaBagShopping } from "react-icons/fa6";
+import { FaCartPlus,FaHome,FaCalendar,FaWallet ,FaList,FaBook,FaUtensils} from "react-icons/fa";
+import { FaBagShopping, FaUser } from "react-icons/fa6";
 import { BsBookmarkPlusFill } from "react-icons/bs";
 import { MdReviews } from "react-icons/md";
 import { MdEmail } from "react-icons/md";
 import useCart from '../../TanstakeHook/useCart';
+import { useState } from 'react';
 
 const Dashbord = () => {
     const [cart] = useCart();
+    const [admin,setAdmin] = useState(true)
     return (
         <div className='flex gap-8 '>
             <div className='w-64 min-h-screen px-5 py-8 bg-orange-800'>
+
+                <div>
+                    <h1 className='text-3xl font-bold text-white uppercase'>bistro boos</h1>
+                  
+                </div>
                 <ul className='menu p-4'>
+                 {
+                    admin ? <>
+                       <li>
+                        <NavLink to={'/dashboard/home'} className='font-bold my-2 uppercase'> <FaHome></FaHome>Admin Home</NavLink>
+                    </li>
+                    <li>
+                        <NavLink to={'/dashboard/cart'} className='font-bold my-2 uppercase'> <FaUtensils></FaUtensils>Admin Items ({cart.length})</NavLink>
+                    </li>
+                    <li>
+                        <NavLink to={'/dashboard/reservation'} className='font-bold my-2 uppercase'> <FaList></FaList>manage items</NavLink>
+                    </li>
+                    <li>
+                        <NavLink to={'/dashboard/payment'} className='font-bold my-2 uppercase'> <FaBook></FaBook> booking</NavLink>
+                    </li>
+                    <li>
+                        <NavLink to={'/dashboard/users'} className='font-bold my-2 uppercase'> <FaUser />all user</NavLink>
+                    </li>
+
+                    </> : <>
                     <li>
                         <NavLink to={'/dashboard/home'} className='font-bold my-2 uppercase'> <FaHome></FaHome>User Home</NavLink>
                     </li>
@@ -31,7 +57,9 @@ const Dashbord = () => {
                     <li>
                         <NavLink to={'/dashboard/booking'} className='font-bold my-2 uppercase'> <BsBookmarkPlusFill />my booking</NavLink>
                     </li>
-
+                    </>
+                 }
+                    {/* Home page Navlinks start */}
                     <div className='divider my-5'></div>
                     <li>
                         <NavLink to={'/'} className='font-bold my-2 uppercase'> <FaHome></FaHome>User Home</NavLink>
@@ -47,6 +75,7 @@ const Dashbord = () => {
                     </li>
                 </ul>
             </div>
+             {/* Home page Navlinks end */}
 
             <div className='flex-1 px-8 py-5'>
                 <Outlet></Outlet>

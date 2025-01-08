@@ -16,6 +16,7 @@ import Privet from "./PrivetRoute/Privet";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import Dashbord from "./DashBoardsection/Dashboard/Dashbord";
 import Mycart from "./DashBoardsection/DashboardPageSection/Mycart/Mycart";
+import Users from "./DashBoardsection/DashboardPageSection/DashBoardAddminsection/Allusers/Users";
 
 const queryClient = new QueryClient();
 
@@ -61,7 +62,13 @@ const router = createBrowserRouter([
       {
         path:"cart",
         element:<Mycart></Mycart>
+      },
+      // addmin section
+      {
+        path:'users',
+        element:<Users></Users>
       }
+
     ]
   }
 ]);

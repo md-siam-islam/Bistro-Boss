@@ -94,13 +94,12 @@ const Signup = () => {
           email: user.email,
         };
   
-        // ডাটাবেজে ব্যবহারকারীর ডাটা যোগ করা
         useAxiospublic.post('/user', userData)
           .then((response) => {
             console.log("Database Response:", response.data);
   
-            if (response.data.insertedId || response.data.success) {
-              navigate('/'); // সফল লগইন হলে হোমপেজে নেভিগেট
+            if (response.data.insertedId) {
+              navigate('/'); 
               Swal.fire({
                 position: "top-end",
                 icon: "success",
