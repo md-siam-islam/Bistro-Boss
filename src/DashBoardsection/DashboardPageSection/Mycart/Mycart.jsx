@@ -2,12 +2,12 @@ import React from "react";
 import useCart from "../../../TanstakeHook/useCart";
 import Sheared from "../../../ShearedSEction/Sheared";
 import { MdDeleteForever } from "react-icons/md";
-import useAxiossecure from "../../../Useaxios/useAxiossecure";
+import UseAxiossecure from "../../../Useaxios/UseAxiossecure";
 import Swal from "sweetalert2";
 
 const Mycart = () => {
-  const [cart,refetch] = useCart();
-  const Axiossecure = useAxiossecure();
+  const [cart, refetch] = useCart();
+  const Axiossecure = UseAxiossecure();
 
   const totalPrice = cart.reduce((total, item) => total + item.price, 0);
 
@@ -24,7 +24,7 @@ const Mycart = () => {
       if (result.isConfirmed) {
         Axiossecure.delete(`cart/${id}`).then((res) => {
           if (res.data.deletedCount > 0) {
-            refetch()
+            refetch();
             Swal.fire({
               title: "Deleted!",
               text: "Your file has been deleted.",
@@ -32,7 +32,6 @@ const Mycart = () => {
             });
           }
         });
-       
       }
     });
   };

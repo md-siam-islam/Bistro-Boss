@@ -6,11 +6,11 @@ import { BsBookmarkPlusFill } from "react-icons/bs";
 import { MdReviews } from "react-icons/md";
 import { MdEmail } from "react-icons/md";
 import useCart from '../../TanstakeHook/useCart';
-import { useState } from 'react';
+import useAdmin from '../../AdminCheack/useAdmin';
 
 const Dashbord = () => {
     const [cart] = useCart();
-    const [admin,setAdmin] = useState(true)
+    const [isAdmin] = useAdmin()
     return (
         <div className='flex gap-8 '>
             <div className='w-64 min-h-screen px-5 py-8 bg-orange-800'>
@@ -21,7 +21,7 @@ const Dashbord = () => {
                 </div>
                 <ul className='menu p-4'>
                  {
-                    admin ? <>
+                    isAdmin ? <>
                        <li>
                         <NavLink to={'/dashboard/home'} className='font-bold my-2 uppercase'> <FaHome></FaHome>Admin Home</NavLink>
                     </li>

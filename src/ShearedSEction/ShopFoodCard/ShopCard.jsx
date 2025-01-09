@@ -3,28 +3,27 @@ import React, { useContext } from "react";
 import Swal from "sweetalert2";
 import { Authcontext } from "../../AuthProvider/Authprovider";
 import { useNavigate } from "react-router-dom";
-import useAxiossecure from "../../Useaxios/useAxiossecure";
+import UseAxiossecure from "../../Useaxios/UseAxiossecure";
 import useCart from "../../TanstakeHook/useCart";
 
 const ShopCard = ({ item }) => {
-  const {user} = useContext(Authcontext)
+  const { user } = useContext(Authcontext);
   const { name, recipe, image, price, _id } = item;
-  const navigate = useNavigate()
-  const Axiossecure = useAxiossecure()
-  const [,refetch]= useCart()
+  const navigate = useNavigate();
+  const Axiossecure = UseAxiossecure();
+  const [, refetch] = useCart();
 
   const handleCart = () => {
-
-    if(user && user.email){
+    if (user && user.email) {
       const menuData = {
         menuId: _id,
         name: name,
         recipe: recipe,
         image: image,
         price: price,
-        email:user.email
+        email: user.email,
       };
-  
+
       Axiossecure.post("/carts", menuData).then((data) => {
         if (data.data.insertedId) {
           Swal.fire({
@@ -35,10 +34,9 @@ const ShopCard = ({ item }) => {
             timer: 2500,
           });
         }
-        refetch()
+        refetch();
       });
-    }
-    else{
+    } else {
       Swal.fire({
         title: "You are Not Login",
         text: "Place Login to add to tahe cart",
@@ -46,14 +44,13 @@ const ShopCard = ({ item }) => {
         showCancelButton: true,
         confirmButtonColor: "#3085d6",
         cancelButtonColor: "#d33",
-        confirmButtonText: "Login"
+        confirmButtonText: "Login",
       }).then((result) => {
         if (result.isConfirmed) {
-          navigate('/login')
+          navigate("/login");
         }
       });
     }
-    
   };
   return (
     <div>
