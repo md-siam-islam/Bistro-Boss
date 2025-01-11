@@ -45,7 +45,12 @@ const Login = () => {
   };
 
   return (
-    <div className="bg-img3 my-20 py-16 px-12 flex flex-col lg:flex-row items-center justify-center gap-5">
+   <div className="w-11/12 mx-auto mt-5">
+    <div className="">
+        <Link to={'/'}><button className="btn btn-success">Back to Home</button></Link>
+      </div>
+     <div className="bg-img3 my-20 py-16 px-12 flex flex-col lg:flex-row items-center justify-center gap-5 w-11/12 mx-auto">
+      
       <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
         <h1 className="text-3xl text-center my-2 font-bold">Login now!</h1>
         <form onSubmit={handleLogin} className="card-body">
@@ -91,6 +96,7 @@ const Login = () => {
         </form>
       </div>
     </div>
+   </div>
   );
 };
 

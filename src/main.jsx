@@ -17,6 +17,9 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import Dashbord from "./DashBoardsection/Dashboard/Dashbord";
 import Mycart from "./DashBoardsection/DashboardPageSection/Mycart/Mycart";
 import Users from "./DashBoardsection/DashboardPageSection/DashBoardAddminsection/Allusers/Users";
+import Additems from "./DashBoardsection/Dashboard/AdminRoutes/AddItems/Additems";
+import AdminRoute from "./AdminRoute/AdminRoute";
+import Mange from "./DashBoardsection/DashboardPageSection/DashBoardAddminsection/ManageItems/Mange";
 
 const queryClient = new QueryClient();
 
@@ -57,16 +60,23 @@ const router = createBrowserRouter([
   },
   {
     path:'dashboard',
-    element:<Dashbord></Dashbord>,
+    element:<Privet><Dashbord></Dashbord></Privet>,
     children:[
       {
         path:"cart",
         element:<Mycart></Mycart>
       },
-      // addmin section
+      // addmin sectionstart
       {
         path:'users',
-        element:<Users></Users>
+        element:<AdminRoute><Users></Users></AdminRoute>
+      },
+      {
+        path:"additems",
+        element:<AdminRoute><Additems></Additems></AdminRoute>
+      },{
+        path:'manageItems',
+        element:<Mange></Mange>
       }
 
     ]
@@ -77,9 +87,9 @@ createRoot(document.getElementById("root")).render(
   <StrictMode>
     <Authprovider>
       <QueryClientProvider client={queryClient}>
-        <div className="w-11/12 mx-auto">
+    
           <RouterProvider router={router}></RouterProvider>
-        </div>
+       
       </QueryClientProvider>
     </Authprovider>
   </StrictMode>

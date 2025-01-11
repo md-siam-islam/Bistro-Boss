@@ -11,7 +11,7 @@ import img5 from "../../../assets/home/05.png";
 
 const Banner = () => {
   return (
-    <div className="mb-16">
+    <div className="my-16">
       <Carousel>
         <div>
           <img src={img1} />

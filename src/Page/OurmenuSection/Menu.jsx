@@ -18,7 +18,7 @@ const Menu = () => {
     const pizza = menu.filter((data) => data.category == "pizza");
 
     return (
-        <div>
+        <div className='w-11/12 mx-auto'>
             <Cover img={img} title={"our menu"}></Cover>
             <Sheared Subtitle={"Dont miss"} title={"TODAY'S OFFER"}></Sheared>
             <Menucategory items={dessert}></Menucategory>

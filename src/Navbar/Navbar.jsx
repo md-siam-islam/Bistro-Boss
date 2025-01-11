@@ -9,8 +9,8 @@ const Navbar = () => {
   const [cart] = useCart();
 
   return (
-    <div>
-      <div className="navbar bg-black fixed z-50 bg-opacity-50 w-11/12 mx-auto text-white">
+    <div className="">
+      <div className="navbar bg-black  bg-opacity-45 w-full  text-white px-8">
         <div className="navbar-start">
           <div className="dropdown">
             <button
@@ -86,7 +86,7 @@ const Navbar = () => {
             </li>
            {
             user ?  <li>
-            <NavLink to={"/dashboard/cart"} className="px-3 font-bold">
+            <NavLink to={"/dashboard"} className="px-3 font-bold">
               DASHBOARD
             </NavLink>
           </li> : ''

@@ -26,10 +26,10 @@ const Dashbord = () => {
                         <NavLink to={'/dashboard/home'} className='font-bold my-2 uppercase'> <FaHome></FaHome>Admin Home</NavLink>
                     </li>
                     <li>
-                        <NavLink to={'/dashboard/cart'} className='font-bold my-2 uppercase'> <FaUtensils></FaUtensils>Admin Items ({cart.length})</NavLink>
+                        <NavLink to={'/dashboard/additems'} className='font-bold my-2 uppercase'> <FaUtensils></FaUtensils>Add Items</NavLink>
                     </li>
                     <li>
-                        <NavLink to={'/dashboard/reservation'} className='font-bold my-2 uppercase'> <FaList></FaList>manage items</NavLink>
+                        <NavLink to={'/dashboard/manageItems'} className='font-bold my-2 uppercase'> <FaList></FaList>manage items</NavLink>
                     </li>
                     <li>
                         <NavLink to={'/dashboard/payment'} className='font-bold my-2 uppercase'> <FaBook></FaBook> booking</NavLink>

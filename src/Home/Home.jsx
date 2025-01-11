@@ -10,7 +10,7 @@ import Testimonials from '../Components/TEstimonial/Testimonials';
 
 const Home = () => {
     return (
-        <div>
+        <div className='w-11/12 mx-auto'>
             <Banner></Banner>
             <Caregorise></Caregorise>
             <Bisrto></Bisrto>

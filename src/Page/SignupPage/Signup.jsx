@@ -86,7 +86,7 @@ const Signup = () => {
   const handleGoogle = () => {
     googleLogin()
       .then((userCredential) => {
-        const user = userCredential.user; // Google থেকে আসা ব্যবহারকারীর ডাটা
+        const user = userCredential.user;
         console.log("Google User:", user);
   
         const userData = {
@@ -135,8 +135,11 @@ const Signup = () => {
   };
   
   return (
-    <div>
-      <div className="bg-img3 my-20 py-16 px-12 flex flex-col lg:flex-row items-center justify-center gap-5">
+    <div className="w-11/12 mx-auto ">
+      <div className="my-8">
+        <Link to={'/'}><button className="btn btn-success">Back to Home</button></Link>
+      </div>
+      <div className="bg-img3 mb-5 py-16 px-12 flex flex-col lg:flex-row items-center justify-center gap-5 w-11/12 mx-auto">
         <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
           <h1 className="text-3xl text-center my-2 font-bold">Sign Up now!</h1>
           <form onSubmit={handleSignup} className="card-body">
