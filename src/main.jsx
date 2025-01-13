@@ -21,6 +21,7 @@ import Additems from "./DashBoardsection/Dashboard/AdminRoutes/AddItems/Additems
 import AdminRoute from "./AdminRoute/AdminRoute";
 import Mange from "./DashBoardsection/DashboardPageSection/DashBoardAddminsection/ManageItems/Mange";
 import Payment from "./DashBoardsection/Dashboard/Payment/Payment";
+import PaymentHistory from "./DashBoardsection/Dashboard/PaymentHistory/PaymentHistory";
 
 const queryClient = new QueryClient();
 
@@ -70,6 +71,10 @@ const router = createBrowserRouter([
       {
         path:"payment",
         element:<Payment></Payment>
+      },
+      {
+        path:'paymentHistory',
+        element:<PaymentHistory></PaymentHistory>
       },
       // addmin sectionstart
       {

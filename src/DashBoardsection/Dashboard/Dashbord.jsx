@@ -49,7 +49,7 @@ const Dashbord = () => {
                         <NavLink to={'/dashboard/payment'} className='font-bold my-2 uppercase'> <FaCalendar></FaCalendar>reservation</NavLink>
                     </li>
                     <li>
-                        <NavLink to={'/dashboard/paymenthistory'} className='font-bold my-2 uppercase'> <FaWallet></FaWallet>payment history</NavLink>
+                        <NavLink to={'/dashboard/paymentHistory'} className='font-bold my-2 uppercase'> <FaWallet></FaWallet>payment history</NavLink>
                     </li>
                     <li>
                         <NavLink to={'/dashboard/review'} className='font-bold my-2 uppercase'> <MdReviews />add review</NavLink>
