@@ -20,6 +20,7 @@ import Users from "./DashBoardsection/DashboardPageSection/DashBoardAddminsectio
 import Additems from "./DashBoardsection/Dashboard/AdminRoutes/AddItems/Additems";
 import AdminRoute from "./AdminRoute/AdminRoute";
 import Mange from "./DashBoardsection/DashboardPageSection/DashBoardAddminsection/ManageItems/Mange";
+import Payment from "./DashBoardsection/Dashboard/Payment/Payment";
 
 const queryClient = new QueryClient();
 
@@ -66,6 +67,10 @@ const router = createBrowserRouter([
         path:"cart",
         element:<Mycart></Mycart>
       },
+      {
+        path:"payment",
+        element:<Payment></Payment>
+      },
       // addmin sectionstart
       {
         path:'users',
@@ -76,7 +81,7 @@ const router = createBrowserRouter([
         element:<AdminRoute><Additems></Additems></AdminRoute>
       },{
         path:'manageItems',
-        element:<Mange></Mange>
+        element:<AdminRoute><Mange></Mange></AdminRoute>
       }
 
     ]

@@ -12,7 +12,7 @@ const Dashbord = () => {
     const [cart] = useCart();
     const [isAdmin] = useAdmin()
     return (
-        <div className='flex gap-8 '>
+        <div className='flex gap-8 w-11/12 mx-auto'>
             <div className='w-64 min-h-screen px-5 py-8 bg-orange-800'>
 
                 <div>
@@ -32,7 +32,7 @@ const Dashbord = () => {
                         <NavLink to={'/dashboard/manageItems'} className='font-bold my-2 uppercase'> <FaList></FaList>manage items</NavLink>
                     </li>
                     <li>
-                        <NavLink to={'/dashboard/payment'} className='font-bold my-2 uppercase'> <FaBook></FaBook> booking</NavLink>
+                        <NavLink to={'/dashboard/boking'} className='font-bold my-2 uppercase'> <FaBook></FaBook> booking</NavLink>
                     </li>
                     <li>
                         <NavLink to={'/dashboard/users'} className='font-bold my-2 uppercase'> <FaUser />all user</NavLink>
@@ -46,10 +46,10 @@ const Dashbord = () => {
                         <NavLink to={'/dashboard/cart'} className='font-bold my-2 uppercase'> <FaCartPlus></FaCartPlus>My Cart ({cart.length})</NavLink>
                     </li>
                     <li>
-                        <NavLink to={'/dashboard/reservation'} className='font-bold my-2 uppercase'> <FaCalendar></FaCalendar>reservation</NavLink>
+                        <NavLink to={'/dashboard/payment'} className='font-bold my-2 uppercase'> <FaCalendar></FaCalendar>reservation</NavLink>
                     </li>
                     <li>
-                        <NavLink to={'/dashboard/payment'} className='font-bold my-2 uppercase'> <FaWallet></FaWallet>payment history</NavLink>
+                        <NavLink to={'/dashboard/paymenthistory'} className='font-bold my-2 uppercase'> <FaWallet></FaWallet>payment history</NavLink>
                     </li>
                     <li>
                         <NavLink to={'/dashboard/review'} className='font-bold my-2 uppercase'> <MdReviews />add review</NavLink>

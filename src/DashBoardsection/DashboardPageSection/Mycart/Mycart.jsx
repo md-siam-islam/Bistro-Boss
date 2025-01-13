@@ -4,6 +4,7 @@ import Sheared from "../../../ShearedSEction/Sheared";
 import { MdDeleteForever } from "react-icons/md";
 import UseAxiossecure from "../../../Useaxios/UseAxiossecure";
 import Swal from "sweetalert2";
+import { Link } from "react-router-dom";
 
 const Mycart = () => {
   const [cart, refetch] = useCart();
@@ -45,7 +46,7 @@ const Mycart = () => {
         <h1 className="text-2xl md:text-3xl uppercase">
           total price: {totalPrice}
         </h1>
-        <button className="btn bg-orange-700">Pay</button>
+       <Link to={'/dashboard/payment'}> <button className="btn bg-orange-700">Pay</button></Link>
       </div>
 
       <div className="my-14 ">
