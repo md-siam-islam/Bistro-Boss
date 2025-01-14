@@ -2,9 +2,11 @@ import React, { useContext } from "react";
 import { NavLink } from "react-router-dom";
 import { Authcontext } from "../AuthProvider/Authprovider";
 import useCart from "../TanstakeHook/useCart";
+import useAdmin from "../AdminCheack/useAdmin";
 
 const Navbar = () => {
   const { user, Usersignout } = useContext(Authcontext);
+  const [isAdmin] = useAdmin();
 
   const [cart] = useCart();
 
@@ -56,6 +58,26 @@ const Navbar = () => {
                   OUR SHOP
                 </NavLink>
               </li>
+              {user && !isAdmin && (
+                <li>
+                  <NavLink
+                    to={"/dashboard/userHome"}
+                    className="px-3 font-bold"
+                  >
+                    DASHBOARD
+                  </NavLink>
+                </li>
+              )}
+              {user && isAdmin && (
+                <li>
+                  <NavLink
+                    to={"/dashboard/adminHome"}
+                    className="px-3 font-bold"
+                  >
+                    DASHBOARD
+                  </NavLink>
+                </li>
+              )}
             </ul>
           </div>
           <NavLink to="/" className="btn btn-ghost text-xl">
@@ -84,13 +106,20 @@ const Navbar = () => {
                 CONTACT US
               </NavLink>
             </li>
-           {
-            user ?  <li>
-            <NavLink to={"/dashboard"} className="px-3 font-bold">
-              DASHBOARD
-            </NavLink>
-          </li> : ''
-           }
+            {user && !isAdmin && (
+              <li>
+                <NavLink to={"/dashboard/userHome"} className="px-3 font-bold">
+                  DASHBOARD
+                </NavLink>
+              </li>
+            )}
+            {user && isAdmin && (
+              <li>
+                <NavLink to={"/dashboard/adminHome"} className="px-3 font-bold">
+                  DASHBOARD
+                </NavLink>
+              </li>
+            )}
             {/* <li>
               <NavLink to={"/dashboard/cart"}>
                 <button className="font-bold flex items-center justify-center relative">
@@ -135,7 +164,6 @@ const Navbar = () => {
               >
                 Logout
               </NavLink>
-              
             </div>
           ) : (
             <div className="flex gap-3">

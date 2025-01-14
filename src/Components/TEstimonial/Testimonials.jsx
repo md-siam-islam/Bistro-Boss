@@ -9,14 +9,15 @@ import "swiper/css/pagination";
 
 // Import required modules
 import { Navigation, Pagination } from "swiper/modules";
+import Axiospublic from "../../AxiosPublic/Axiospublic";
 
 const Testimonials = () => {
   const [review, setReview] = useState([]);
+  const useAxiospublic = Axiospublic()
 
   useEffect(() => {
-    fetch("review.json")
-      .then((res) => res.json())
-      .then((data) => setReview(data));
+    useAxiospublic.get('/review')
+      .then((res) => setReview(res.data));
   }, []);
 
   return (

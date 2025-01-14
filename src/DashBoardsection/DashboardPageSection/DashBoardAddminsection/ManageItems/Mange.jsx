@@ -54,7 +54,7 @@ const Mange = () => {
               <th>ITEM IMAGE</th>
               <th>ITEM NAME</th>
               <th>PRICE</th>
-              <th>ACTION</th>
+              {/* <th>ACTION</th> */}
               <th>ACTION</th>
             </tr>
           </thead>
@@ -77,11 +77,13 @@ const Mange = () => {
                 </td>
                 <td>{item.name}</td>
                 <td>${item.price.toFixed(2)}</td>
-                <td>
+
+                {/* todo section update ar kaj kore hobe*/}
+                {/* <td>
                   <button className="btn btn-ghost btn-lg">
                     <FaEdit></FaEdit>
                   </button>
-                </td>
+                </td> */}
                 <td>
                   <button
                     onClick={() => handleDelete(item._id)}

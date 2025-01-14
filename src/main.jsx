@@ -22,6 +22,9 @@ import AdminRoute from "./AdminRoute/AdminRoute";
 import Mange from "./DashBoardsection/DashboardPageSection/DashBoardAddminsection/ManageItems/Mange";
 import Payment from "./DashBoardsection/Dashboard/Payment/Payment";
 import PaymentHistory from "./DashBoardsection/Dashboard/PaymentHistory/PaymentHistory";
+import AdminHome from "./DashBoardsection/AdminHome/AdminHome";
+import UserHome from "./DashBoardsection/UserHOme/UserHome";
+import ReviewForm from "./DashBoardsection/Dashboard/ReviewForm/ReviewForm";
 
 const queryClient = new QueryClient();
 
@@ -65,6 +68,10 @@ const router = createBrowserRouter([
     element:<Privet><Dashbord></Dashbord></Privet>,
     children:[
       {
+        path:'userHome',
+        element:<UserHome></UserHome>
+      },
+      {
         path:"cart",
         element:<Mycart></Mycart>
       },
@@ -76,7 +83,15 @@ const router = createBrowserRouter([
         path:'paymentHistory',
         element:<PaymentHistory></PaymentHistory>
       },
+      {
+        path:'review',
+        element:<ReviewForm></ReviewForm>
+      },
       // addmin sectionstart
+      {
+        path:'adminHome',
+        element:<AdminRoute><AdminHome></AdminHome></AdminRoute>
+      },
       {
         path:'users',
         element:<AdminRoute><Users></Users></AdminRoute>

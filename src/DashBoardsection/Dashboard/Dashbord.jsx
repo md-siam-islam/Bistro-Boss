@@ -23,7 +23,7 @@ const Dashbord = () => {
                  {
                     isAdmin ? <>
                        <li>
-                        <NavLink to={'/dashboard/home'} className='font-bold my-2 uppercase'> <FaHome></FaHome>Admin Home</NavLink>
+                        <NavLink to={'/dashboard/adminHome'} className='font-bold my-2 uppercase'> <FaHome></FaHome>Admin Home</NavLink>
                     </li>
                     <li>
                         <NavLink to={'/dashboard/additems'} className='font-bold my-2 uppercase'> <FaUtensils></FaUtensils>Add Items</NavLink>
@@ -31,16 +31,16 @@ const Dashbord = () => {
                     <li>
                         <NavLink to={'/dashboard/manageItems'} className='font-bold my-2 uppercase'> <FaList></FaList>manage items</NavLink>
                     </li>
-                    <li>
+                    {/* <li>
                         <NavLink to={'/dashboard/boking'} className='font-bold my-2 uppercase'> <FaBook></FaBook> booking</NavLink>
-                    </li>
+                    </li> */}
                     <li>
                         <NavLink to={'/dashboard/users'} className='font-bold my-2 uppercase'> <FaUser />all user</NavLink>
                     </li>
 
                     </> : <>
                     <li>
-                        <NavLink to={'/dashboard/home'} className='font-bold my-2 uppercase'> <FaHome></FaHome>User Home</NavLink>
+                        <NavLink to={'/dashboard/userHome'} className='font-bold my-2 uppercase'> <FaHome></FaHome>User Home</NavLink>
                     </li>
                     <li>
                         <NavLink to={'/dashboard/cart'} className='font-bold my-2 uppercase'> <FaCartPlus></FaCartPlus>My Cart ({cart.length})</NavLink>
@@ -54,9 +54,9 @@ const Dashbord = () => {
                     <li>
                         <NavLink to={'/dashboard/review'} className='font-bold my-2 uppercase'> <MdReviews />add review</NavLink>
                     </li>
-                    <li>
+                    {/* <li>
                         <NavLink to={'/dashboard/booking'} className='font-bold my-2 uppercase'> <BsBookmarkPlusFill />my booking</NavLink>
-                    </li>
+                    </li> */}
                     </>
                  }
                     {/* Home page Navlinks start */}
