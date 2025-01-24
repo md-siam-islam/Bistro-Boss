@@ -127,7 +127,7 @@ const Additems = () => {
           <input {...register("image")} type="file" className="file-input w-full max-w-xs" />
           </div>
 
-         <button className="btn bg-blue-600 flex items-center gap-2">
+         <button className="btn bg-[#FFA500] text-white font-semibold flex items-center gap-2">
             Add Item <FaUtensils></FaUtensils>
          </button>
         </form>

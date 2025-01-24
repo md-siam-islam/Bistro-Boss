@@ -6,7 +6,7 @@ import { useQuery } from "@tanstack/react-query";
 
 const PaymentHistory = () => {
     const {user} = useContext(Authcontext)
-    const useAxiospublic = useAxiospublic()
+    const useAxiospublic = Axiospublic()
     const {data: payment = [],refetch} = useQuery({
         queryKey:['payment',user?.email],
         queryFn: async () => {

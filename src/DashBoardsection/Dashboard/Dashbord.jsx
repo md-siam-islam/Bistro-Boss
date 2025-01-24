@@ -12,7 +12,7 @@ const Dashbord = () => {
     const [cart] = useCart();
     const [isAdmin] = useAdmin()
     return (
-        <div className='flex gap-8 w-11/12 mx-auto'>
+        <div className='flex gap-8 '>
             <div className='w-64 min-h-screen px-5 py-8 bg-orange-800'>
 
                 <div>

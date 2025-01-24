@@ -197,8 +197,8 @@ const Signup = () => {
               </label>
               <input
                 type="password"
-                name="Enter Your password"
-                placeholder="password"
+                name="password"
+                placeholder="Enter Your password"
                 className="input input-bordered"
                 required
               />
