@@ -3,6 +3,9 @@ import SideImg from "../../assets/others/authentication1.png";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Authcontext } from "../../AuthProvider/Authprovider";
 import Swal from "sweetalert2";
+import { FaLeftLong } from "react-icons/fa6";
+import login from "../../assets/LottiFile/signup.json"
+import Lottie from "lottie-react";
 
 const Login = () => {
   const { userLogin, setUser } = useContext(Authcontext);
@@ -45,13 +48,17 @@ const Login = () => {
   };
 
   return (
-   <div className="w-11/12 mx-auto mt-5">
+   <div className="w-full mx-auto">
+
     <div className="">
-        <Link to={'/'}><button className="btn btn-success">Back to Home</button></Link>
-      </div>
-     <div className="bg-img3 my-20 py-16 px-12 flex flex-col lg:flex-row items-center justify-center gap-5 w-11/12 mx-auto">
-      
-      <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+        <Link to={'/'}><button className="btn bg-[#FFA500] font-semibold text-white"><FaLeftLong></FaLeftLong>Back to Home</button></Link>
+    </div>
+
+     <div className=" flex flex-col lg:flex-row items-center justify-center gap-5 w-11/12 mx-auto">
+        <div className="w-1/2">
+        <Lottie animationData={login} />;
+        </div>
+      <div className="card bg-base-100 w-1/2 shrink-0 shadow-2xl">
         <h1 className="text-3xl text-center my-2 font-bold">Login now!</h1>
         <form onSubmit={handleLogin} className="card-body">
           {/* Email Input */}
@@ -84,12 +91,12 @@ const Login = () => {
 
           {/* Submit Button */}
           <div className="form-control mt-6">
-            <button className="btn bg-[#D1A054B3]">Login</button>
+            <button className="btn bg-[#FFA500] text-white font-semibold">Login</button>
           </div>
 
-          <p className="my-2 text-center text-[#D1A054B3]">
+          <p className="my-2 text-center text-black font-semibold">
             Already registered? Go to{" "}
-            <Link className="text-green-600" to={"/signup"}>
+            <Link className="text-[#FFA500]" to={"/signup"}>
               Sign Up
             </Link>
           </p>

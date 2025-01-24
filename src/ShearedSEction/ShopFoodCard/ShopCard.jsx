@@ -3,14 +3,14 @@ import React, { useContext } from "react";
 import Swal from "sweetalert2";
 import { Authcontext } from "../../AuthProvider/Authprovider";
 import { useNavigate } from "react-router-dom";
-import UseAxiossecure from "../../Useaxios/UseAxiossecure";
 import useCart from "../../TanstakeHook/useCart";
+import Axiospublic from "../../AxiosPublic/Axiospublic";
 
 const ShopCard = ({ item }) => {
   const { user } = useContext(Authcontext);
   const { name, recipe, image, price, _id } = item;
   const navigate = useNavigate();
-  const Axiossecure = UseAxiossecure();
+  const useAxiospublic = Axiospublic()
   const [, refetch] = useCart();
 
   const handleCart = () => {
@@ -24,7 +24,7 @@ const ShopCard = ({ item }) => {
         email: user.email,
       };
 
-      Axiossecure.post("/carts", menuData).then((data) => {
+      useAxiospublic.post("/carts", menuData).then((data) => {
         if (data.data.insertedId) {
           Swal.fire({
             position: "top-end",

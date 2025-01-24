@@ -146,7 +146,7 @@ const Navbar = () => {
               />
               <NavLink
                 onClick={Usersignout}
-                className="btn bg-[#dd9932b3] hover:bg-emerald-700 font-bold text-white"
+                className="btn bg-[#FFA500] font-bold text-white"
               >
                 Logout
               </NavLink>
@@ -155,13 +155,13 @@ const Navbar = () => {
             <div className="flex gap-3">
               <NavLink
                 to={"/login"}
-                className="btn bg-[#dd9932b3] hover:bg-emerald-700 font-bold text-white"
+                className="btn bg-[#FFA500] font-bold text-white"
               >
                 Login
               </NavLink>
               <NavLink
                 to={"/signup"}
-                className="btn bg-[#da9938b3] hover:bg-emerald-700 font-bold text-white"
+                className="btn bg-[#FFA500] font-bold text-white"
               >
                 Sign Up
               </NavLink>

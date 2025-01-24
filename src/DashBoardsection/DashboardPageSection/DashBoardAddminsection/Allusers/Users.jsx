@@ -5,13 +5,15 @@ import UseAxiossecure from "../../../../Useaxios/UseAxiossecure";
 import { MdDeleteForever } from "react-icons/md";
 import { FaUser } from "react-icons/fa6";
 import Swal from "sweetalert2";
+import Axiospublic from "../../../../AxiosPublic/Axiospublic";
 
 const Users = () => {
   const Axiossecure = UseAxiossecure();
+  const useAxiospublic = Axiospublic()
   const { data: users = [], refetch } = useQuery({
     queryKey: ["users"],
     queryFn: async () => {
-      const res = await Axiossecure.get("/user");
+      const res = await useAxiospublic.get("/user");
       
       return res.data;
     },

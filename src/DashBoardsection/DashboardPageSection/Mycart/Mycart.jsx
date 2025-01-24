@@ -2,13 +2,13 @@ import React from "react";
 import useCart from "../../../TanstakeHook/useCart";
 import Sheared from "../../../ShearedSEction/Sheared";
 import { MdDeleteForever } from "react-icons/md";
-import UseAxiossecure from "../../../Useaxios/UseAxiossecure";
 import Swal from "sweetalert2";
 import { Link } from "react-router-dom";
+import Axiospublic from "../../../AxiosPublic/Axiospublic";
 
 const Mycart = () => {
   const [cart, refetch] = useCart();
-  const Axiossecure = UseAxiossecure();
+  const useAxiospublic = Axiospublic()
 
   const totalPrice = cart.reduce((total, item) => total + item.price, 0);
 
@@ -23,7 +23,7 @@ const Mycart = () => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        Axiossecure.delete(`cart/${id}`).then((res) => {
+        useAxiospublic.delete(`cart/${id}`).then((res) => {
           if (res.data.deletedCount > 0) {
             refetch();
             Swal.fire({

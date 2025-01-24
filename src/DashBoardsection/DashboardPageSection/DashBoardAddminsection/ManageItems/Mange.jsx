@@ -1,17 +1,15 @@
 import { useQuery } from "@tanstack/react-query";
-import React from "react";
-import UseAxiossecure from "../../../../Useaxios/UseAxiossecure";
-import { FaEdit } from "react-icons/fa";
 import { MdDeleteForever } from "react-icons/md";
 import Swal from "sweetalert2";
+import Axiospublic from "../../../../AxiosPublic/Axiospublic";
 
 const Mange = () => {
-  const Axiossecure = UseAxiossecure();
+  const useAxiospublic = Axiospublic()
 
   const { data: menu = [], refetch } = useQuery({
     queryKey: ["menu"],
     queryFn: async () => {
-      const res = await Axiossecure.get("/menu");
+      const res = await useAxiospublic.get("/menu");
       return res.data;
     },
   });
@@ -26,7 +24,7 @@ const Mange = () => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        Axiossecure.delete(`/menu/${id}`)
+        useAxiospublic.delete(`/menu/${id}`)
         .then((res) => {
           // console.log(res);
           if (res.data.deletedCount) {

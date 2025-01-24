@@ -3,15 +3,14 @@ import Sheared from "../../../ShearedSEction/Sheared";
 import { Authcontext } from "../../../AuthProvider/Authprovider";
 import Axiospublic from "../../../AxiosPublic/Axiospublic";
 import { useQuery } from "@tanstack/react-query";
-import UseAxiossecure from "../../../Useaxios/UseAxiossecure";
 
 const PaymentHistory = () => {
     const {user} = useContext(Authcontext)
-    const Axiossecure = UseAxiossecure()
+    const useAxiospublic = useAxiospublic()
     const {data: payment = [],refetch} = useQuery({
         queryKey:['payment',user?.email],
         queryFn: async () => {
-            const res = await Axiossecure.get(`/payment/${user?.email}`)
+            const res = await useAxiospublic.get(`/payment/${user?.email}`)
             return res.data
         }
     })

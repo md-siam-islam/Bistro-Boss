@@ -4,8 +4,10 @@ import { Authcontext } from "../../AuthProvider/Authprovider";
 import Swal from "sweetalert2";
 import Axiospublic from "../../AxiosPublic/Axiospublic";
 import { FaGoogle } from "react-icons/fa";
+import Lottie from "lottie-react";
+import signup from '../../../src/assets/LottiFile/signup.json'
+import { FaLeftLong } from "react-icons/fa6";
 
-const useAxiospublic = Axiospublic();
 
 const Signup = () => {
   const navigate = useNavigate();
@@ -136,12 +138,17 @@ const Signup = () => {
   };
   
   return (
-    <div className="w-11/12 mx-auto ">
-      <div className="my-8">
-        <Link to={'/'}><button className="btn btn-success">Back to Home</button></Link>
+    <div className="w-full">
+      <div className="">
+        <Link to={'/'}><button className="btn bg-[#FFA500] text-white font-semibold"><FaLeftLong></FaLeftLong>Back to Home</button></Link>
       </div>
-      <div className="bg-img3 mb-5 py-16 px-12 flex flex-col lg:flex-row items-center justify-center gap-5 w-11/12 mx-auto">
-        <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+      <div className="flex flex-col lg:flex-row items-center justify-between gap-5 w-11/12 mx-auto p-5">
+
+      <div className="w-1/2">
+      <Lottie animationData={signup} />;
+      </div>
+
+        <div className="card bg-white w-1/2 shrink-0 shadow-2xl mb-5">
           <h1 className="text-3xl text-center my-2 font-bold">Sign Up now!</h1>
           <form onSubmit={handleSignup} className="card-body">
             <div className="form-control">
@@ -159,12 +166,12 @@ const Signup = () => {
 
             <div className="form-control">
               <label className="label">
-                <span className="label-text">Photo Url</span>
+                <span className="label-text">Photo URL</span>
               </label>
               <input
                 type="text"
                 name="photo"
-                placeholder="Enter Your Photo Url"
+                placeholder="Enter Your Photo URL"
                 className="input input-bordered"
                 required
               />
@@ -177,7 +184,7 @@ const Signup = () => {
               <input
                 type="email"
                 name="email"
-                placeholder="email"
+                placeholder="Enter Your Email"
                 className="input input-bordered"
                 required
               />
@@ -190,34 +197,35 @@ const Signup = () => {
               </label>
               <input
                 type="password"
-                name="password"
+                name="Enter Your password"
                 placeholder="password"
                 className="input input-bordered"
                 required
               />
             </div>
             <div className="form-control mt-6">
-              <button className="btn bg-[#D1A054B3]">Sign Up</button>
+              <button className="btn bg-[#FFA500] text-white">Sign Up</button>
             </div>
 
             {/* Submit Button */}
             <div className="divider">or</div>
 
-            <button onClick={handleGoogle} class="flex items-center justify-center bg-yellow-500 text-white font-medium py-2 px-4 rounded-lg hover:bg-yellow-600 focus:outline-none focus:ring-2 focus:ring-yellow-400 gap-2">
+            <button onClick={handleGoogle} class="flex items-center justify-center bg-[#FFA500] text-white font-medium py-2 px-4 rounded-lg hover:bg-yellow-600 focus:outline-none focus:ring-2 focus:ring-yellow-400 gap-2">
               <FaGoogle></FaGoogle>
               Continue with Google
             </button>
 
             <div>
-              <p className="my-2 text-center text-[#D1A054B3]">
+              <p className="my-2 text-center text-black font-semibold">
                 Already registered? Go to{" "}
-                <Link className="text-green-600" to={"/login"}>
+                <Link className="text-[#FFA500]" to={"/login"}>
                   Login
                 </Link>
               </p>
             </div>
           </form>
         </div>
+
       </div>
     </div>
   );
