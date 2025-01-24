@@ -9,17 +9,6 @@ const Popularitem = () => {
   const [menu] = useHook()
 
   const PopulerItem = menu.filter((menu) => menu.category == "popular");
-  // const [menu, setMenu] = useState([]);
-
-  // useEffect(() => {
-  //   fetch("Menu.json")
-  //     .then((res) => res.json())
-  //     .then((data) => {
-  //       console.log(data);
-  //       const PopulerItem = data.filter((data) => data.category == "popular");
-  //       setMenu(PopulerItem);
-  //     });
-  // }, []);
   return (
     <div className="my-32 items-center">
         <Sheared Subtitle={"Check it out"} title={"FROM OUR MENU"}>
@@ -31,7 +20,7 @@ const Popularitem = () => {
         ))}
       </div>
       <div className="flex items-center justify-center my-5">
-        <Link className="btn font-semibold  border-b-8 border-black border-0 hover:bg-teal-500">View Full  Menu</Link>
+        <Link to={'/menu'} className="btn font-semibold  border-b-8 border-black border-0 hover:bg-teal-500">View Full  Menu</Link>
       </div>
     </div>
   );

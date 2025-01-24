@@ -3,24 +3,7 @@ import Sheared from '../../ShearedSEction/Sheared';
 import salad from "../../assets/home/salad-bg.jpg"
 
 const Recomends = () => {
-    
-    // const sampleItems = [
-    //     {
-           
-    //         name: 'Caesar Salad',
-    //         recipe: 'Lettuce, Eggs, Parmesan Cheese, Chicken Breast Fillets.',
-    //     },
-    //     {
-           
-    //         name: 'Grilled Salmon',
-    //         recipe: 'Fresh Salmon with Vegetables and Lemon Dressing.',
-    //     },
-    //     {
-            
-    //         name: 'Pasta Primavera',
-    //         recipe: 'Pasta with Fresh Vegetables in Creamy Sauce.',
-    //     },
-    // ];
+
 
     return (
         <div className="my-36">
@@ -48,11 +31,11 @@ const Recomends = () => {
                             </p>
                         </div>
 
-                        <div className="p-4 text-center">
+                        {/* <div className="p-4 text-center">
                             <button className="w-full  text-[#BB8506] font-semibold btn border-b-4 border-[#BB8506] border-0 py-2 px-4 rounded-lg transition duration-300">
                                 ADD TO CART
                             </button>
-                        </div>
+                        </div> */}
                        </div>
                     </div>
                     
@@ -74,11 +57,11 @@ const Recomends = () => {
                             </p>
                         </div>
 
-                        <div className="p-4 text-center">
+                        {/* <div className="p-4 text-center">
                             <button className="w-full bg-[#1F2937] text-[#BB8506] font-semibold btn py-2 px-4 rounded-lg transition duration-300">
                                 ADD TO CART
                             </button>
-                        </div>
+                        </div> */}
                        </div>
                     </div>
 
@@ -100,11 +83,11 @@ const Recomends = () => {
                             </p>
                         </div>
 
-                        <div className="p-4 text-center">
+                        {/* <div className="p-4 text-center">
                             <button className="w-full  text-[#BB8506] font-semibold btn border-b-4 border-[#BB8506] border-0 py-2 px-4 rounded-lg transition duration-300">
                                 ADD TO CART
                             </button>
-                        </div>
+                        </div> */}
                        </div>
                     </div>
               

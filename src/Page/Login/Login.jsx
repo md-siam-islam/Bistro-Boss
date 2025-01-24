@@ -69,7 +69,7 @@ const Login = () => {
             <input
               type="email"
               name="email"
-              placeholder="email"
+              placeholder="Enter Your Email"
               className="input input-bordered"
               required
             />
@@ -83,7 +83,7 @@ const Login = () => {
             <input
               type="password"
               name="password"
-              placeholder="password"
+              placeholder="Enter Your Password"
               className="input input-bordered"
               required
             />
@@ -95,7 +95,7 @@ const Login = () => {
           </div>
 
           <p className="my-2 text-center text-black font-semibold">
-            Already registered? Go to{" "}
+            Already registered? Go to
             <Link className="text-[#FFA500]" to={"/signup"}>
               Sign Up
             </Link>

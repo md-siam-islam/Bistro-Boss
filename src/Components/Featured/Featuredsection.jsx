@@ -7,7 +7,7 @@ const Featuredsection = () => {
   return (
     <div className="my-36">
       <div className="h-[700px] bg-img2 bg-cover bg-no-repeat  bg-fixed">
-        <div className="bg-black bg-opacity-65">
+        <div className="bg-black h-full bg-opacity-65">
           <div className="pt-10">
             <Sheared
               Subtitle={"Check It Out"}
@@ -22,14 +22,9 @@ const Featuredsection = () => {
               <h1 className="text-white font-bold text-2xl md:text-4xl">
                 WHERE CAN I GET SOOME
               </h1>
-              <p className="text-xl font-semibold my-5 text-white">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste
-                ratione porro ad nesciunt similique omnis, ex excepturi saepe
-                dicta adipisci? Alias ipsam quo aliquid! Id, obcaecati aliquam
-                optio possimus ut magni illum alias itaque perspiciatis debitis,
-                corrupti, culpa architecto esse.
+              <p className="text-xl my-5 text-white">
+              Percent Daily Values are based on a 2,000 calorie diet. Your daily values may be higher or lower depending on your calorie needs.
               </p>
-              <Link className="btn font-semibold  border-b-8 border-black border-0 hover:bg-teal-500">Read More</Link>
             </div>
           </div>
         </div>

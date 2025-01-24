@@ -12,7 +12,7 @@ const Navbar = () => {
 
   return (
     <div className="">
-      <div className="navbar bg-black  bg-opacity-45 w-full  text-white px-8">
+      <div className="navbar  w-full px-8">
         <div className="navbar-start">
           <div className="dropdown">
             <button
@@ -81,7 +81,7 @@ const Navbar = () => {
             </ul>
           </div>
           <NavLink to="/" className="btn btn-ghost text-xl">
-            BISTRO BOSS
+            BISTRO<span className="text-[#FFA500]">BOSS</span>
           </NavLink>
         </div>
         <div className="navbar-center hidden lg:flex">

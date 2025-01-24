@@ -22,7 +22,7 @@ const Shop = () => {
 
     
   return (
-    <div>
+    <div className="w-11/12 mx-auto">
       <Cover title={"our shop"} img={shopeBg}></Cover>
 
      <div className="my-14 flex items-center justify-center">
