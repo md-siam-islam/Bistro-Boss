@@ -120,20 +120,6 @@ const Navbar = () => {
                 </NavLink>
               </li>
             )}
-            {/* <li>
-              <NavLink to={"/dashboard/cart"}>
-                <button className="font-bold flex items-center justify-center relative">
-                  <img
-                    className="w-8"
-                    src="https://img.icons8.com/?size=48&id=j3XI41kBOIXY&format=png"
-                    alt=""
-                  />
-                  <div className="absolute top-0 right-0 bg-red-500 text-white text-xs font-bold rounded-full w-5 h-5 flex items-center justify-center">
-                    {cart.length}
-                  </div>
-                </button>
-              </NavLink>
-            </li> */}
           </ul>
         </div>
 

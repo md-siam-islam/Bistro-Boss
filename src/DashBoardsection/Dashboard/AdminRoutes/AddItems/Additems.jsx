@@ -7,6 +7,7 @@ import Swal from "sweetalert2";
 
 const Additems = () => {
     const imagekey = "6f830635465660e6fbef1d712018f776"
+    
     const image_hosting_api_key = `https://api.imgbb.com/1/upload?key=${imagekey}`
   const {
     register,
@@ -19,7 +20,7 @@ const Additems = () => {
   const Axiossecure = UseAxiossecure()
 
   const onSubmit = async (data) => {
-    console.log("Form Data:", data);
+    // console.log("Form Data:", data);
   
     if (!data.image || !data.image[0]) {
       console.error("No file selected!");
@@ -34,7 +35,7 @@ const Additems = () => {
           "Content-Type": "multipart/form-data",
         },
       });
-      console.log("Response:", res.data);
+      // console.log("Response:", res.data);
       if(res.data.success){
         const menuItems = {
           name : data.name,
@@ -45,7 +46,6 @@ const Additems = () => {
         }
         Axiossecure.post("/menu",menuItems)
         .then((res) =>{
-          console.log(res);
           reset()
           if(res.data.insertedId){
             Swal.fire({

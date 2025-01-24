@@ -1,6 +1,5 @@
 import { CardElement, useElements, useStripe } from "@stripe/react-stripe-js";
 import { useContext, useEffect, useState } from "react";
-import UseAxiossecure from "../../../../Useaxios/UseAxiossecure";
 import useCart from "../../../../TanstakeHook/useCart";
 import { Authcontext } from "../../../../AuthProvider/Authprovider";
 import Axiospublic from "../../../../AxiosPublic/Axiospublic";
@@ -23,7 +22,7 @@ const CheckoutForm = () => {
 
   useEffect(() => {
     useAxiospublic
-      .post("/create-payment-intent", { price: totalPrice }) // Ensure totalPrice is a number
+      .post("/create-payment-intent", { price: totalPrice })
       .then((res) => {
         setClientsecret(res.data.clientSecret);
       })
@@ -49,10 +48,10 @@ const CheckoutForm = () => {
     });
 
     if (error) {
-      console.log("[error]", error);
+      // console.log("[error]", error);
       setError(error.message);
     } else {
-      console.log("[PaymentMethod]", paymentMethod);
+      // console.log("[PaymentMethod]", paymentMethod);
       setError("");
     }
     //   confirm card payment
@@ -70,9 +69,9 @@ const CheckoutForm = () => {
       console.error("Error confirming payment:", confirmError);
       setError(confirmError.message);
     } else {
-      console.log("Payment successful:", paymentIntent);
+      // console.log("Payment successful:", paymentIntent);
       if(paymentIntent.status === "succeeded"){
-        console.log('id',paymentIntent.id);
+        // console.log('id',paymentIntent.id);
         setPaymentId(paymentIntent.id)
         const paymentInfo = {
             email : user.email,

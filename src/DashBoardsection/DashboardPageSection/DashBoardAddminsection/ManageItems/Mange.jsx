@@ -28,7 +28,7 @@ const Mange = () => {
       if (result.isConfirmed) {
         Axiossecure.delete(`/menu/${id}`)
         .then((res) => {
-          console.log(res);
+          // console.log(res);
           if (res.data.deletedCount) {
             refetch()
             Swal.fire({

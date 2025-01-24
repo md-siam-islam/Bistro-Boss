@@ -46,14 +46,16 @@ const Signup = () => {
       .then((userCredential) => {
         const user = userCredential.user;
         setUser(user);
-        userInfo({ displayName: name, photoURL: photo }).then(() => {
+        userInfo({ displayName: name, photoURL: photo })
+        .then(() => {
           const userInfo = {
             email: email,
             name: name,
           };
-          useAxiospublic.post("/user", userInfo).then((res) => {
+          useAxiospublic.post("/user", userInfo)
+          .then((res) => {
             if (res.data.insertedId) {
-              console.log("user added database done");
+              // console.log("user added database done");
               Swal.fire({
                 position: "top-end",
                 icon: "success",
@@ -87,7 +89,7 @@ const Signup = () => {
     googleLogin()
       .then((userCredential) => {
         const user = userCredential.user;
-        console.log("Google User:", user);
+        // console.log("Google User:", user);
   
         const userData = {
           name: user.displayName,
@@ -96,7 +98,6 @@ const Signup = () => {
   
         useAxiospublic.post('/user', userData)
           .then((response) => {
-            console.log("Database Response:", response.data);
   
             if (response.data.insertedId) {
               navigate('/'); 

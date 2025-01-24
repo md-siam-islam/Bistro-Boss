@@ -35,7 +35,6 @@ const Testimonials = () => {
         modules={[Navigation, Pagination]}
         className="mySwiper mt-12"
       >
-        {/* Map through reviews */}
         {review.map((item, index) => (
           <SwiperSlide key={index}>
             <div className="text-center px-8 max-w-xl mx-auto flex flex-col items-center">

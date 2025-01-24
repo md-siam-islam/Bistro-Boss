@@ -23,7 +23,7 @@ const ReviewForm = () => {
       name: user.displayName,
       email: user.email,
     };
-    console.log(review);
+    // console.log(review);
     useAxiospublic.post('/review',review)
     .then((res) => {
       if(res.data.insertedId){
