@@ -39,11 +39,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/menu",
-        element: (
-          <Privet>
-            <Menu></Menu>
-          </Privet>
-        ),
+        element: <Menu></Menu>,
       },
       {
         path: "/shop/:category",

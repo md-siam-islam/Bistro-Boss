@@ -9,19 +9,18 @@ import Featuredsection from '../Components/Featured/Featuredsection';
 import Testimonials from '../Components/TEstimonial/Testimonials';
 
 const Home = () => {
-    return (
-        <div className='w-11/12 mx-auto'>
-            <Banner></Banner>
-            <Caregorise></Caregorise>
-            <Bisrto></Bisrto>
-            <Popularitem></Popularitem>
-            <Callus></Callus>
-            <Recomends></Recomends>
-            <Featuredsection></Featuredsection>
-            <Testimonials></Testimonials>
-            
-        </div>
-    );
+  return (
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+      <Banner />
+      <Caregorise />
+      <Bisrto />
+      <Popularitem />
+      <Callus />
+      <Recomends />
+      <Featuredsection />
+      <Testimonials />
+    </div>
+  );
 };
 
-export default Home;
+export default Home;

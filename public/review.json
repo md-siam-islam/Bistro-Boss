@@ -1,32 +1,82 @@
 [
-    {
-        "_id": "643010e0f5a7e52ce1e8fa65",
-        "name": "Jane Doe",
-        "details": "Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like). It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
-        "rating": 3
-    },
-    {
-        "_id": "643010f9f5a7e52ce1e8fa66",
-        "name": "John Doe",
-        "details": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)",
-        "rating": 2
-    },
-    {
-        "_id": "6430110af5a7e52ce1e8fa67",
-        "name": "MJ Doe",
-        "details": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)",
-        "rating": 5
-    },
-    {
-        "_id": "64301123f5a7e52ce1e8fa68",
-        "name": "Sarah Smith",
-        "details": "I found the product to be incredibly useful and easy to use. The interface is intuitive, and it has all the features I need. Highly recommend it!",
-        "rating": 4
-    },
-    {
-        "_id": "6430113af5a7e52ce1e8fa69",
-        "name": "Robert Johnson",
-        "details": "This is by far the best service I have ever used. The customer support is outstanding, and the product itself is top-notch. I couldn't be happier!",
-        "rating": 5
-    }
+  {
+    "_id": "rev_001",
+    "name": "Chef Marcus Vance",
+    "position": "Michelin Guide Reviewer & Culinary Critic",
+    "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=250&q=80",
+    "details": "Bistro Boss elevates dining to a genuine art form. The Pan Roasted Duck Breast with potato gratin and cherry demi-glace was executed to perfection. The wine pairings and warm, intimate atmosphere made for an unforgettable evening.",
+    "rating": 5,
+    "dish": "Roast Duck Breast",
+    "date": "February 2025"
+  },
+  {
+    "_id": "rev_002",
+    "name": "Elena Rostova",
+    "position": "Verified Food Critic, Gourmet Gazette",
+    "avatar": "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=250&q=80",
+    "details": "Without question, the Truffle Burrata and Breton Fish Stew here rival the best bistros in Paris. Each ingredient is thoughtfully sourced and balanced. The service is attentive without ever feeling intrusive.",
+    "rating": 5,
+    "dish": "Breton Fish Stew & Burrata",
+    "date": "January 2025"
+  },
+  {
+    "_id": "rev_003",
+    "name": "Jonathan Sterling",
+    "position": "Executive Hospitality Consultant",
+    "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=250&q=80",
+    "details": "We celebrated our company anniversary in the private dining room. From the sourdough starters to the Madagascar Vanilla Creme Brulee, the culinary precision and hospitality were world-class.",
+    "rating": 5,
+    "dish": "Madagascar Vanilla Creme Brulee",
+    "date": "January 2025"
+  },
+  {
+    "_id": "rev_004",
+    "name": "Sophia Al-Mansoor",
+    "position": "Luxury Lifestyle Blogger",
+    "avatar": "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=250&q=80",
+    "details": "The aesthetic of Bistro Boss is simply breathtaking! The mood lighting, bespoke table settings, and artisanal cocktails like the Smoked Rosemary Old Fashioned make it my favorite weekend escape.",
+    "rating": 5,
+    "dish": "Artisanal Cocktails & Tapas",
+    "date": "December 2024"
+  },
+  {
+    "_id": "rev_005",
+    "name": "David K. Henderson",
+    "position": "Master Sommelier",
+    "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=250&q=80",
+    "details": "The Wagyu Beef Medallion melted in the mouth with rich, complex umami notes. The chef's attention to sauce reduction and temperature control is worthy of multiple accolades.",
+    "rating": 5,
+    "dish": "Wagyu Beef Medallion",
+    "date": "November 2024"
+  },
+  {
+    "_id": "rev_006",
+    "name": "Camilla Dupont",
+    "position": "French Gastronomy Enthusiast",
+    "avatar": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=250&q=80",
+    "details": "Having grown up in Lyon, finding authentic French culinary heritage abroad is rare. Bistro Boss delivers with passion, authentic herbs, and unmatched hospitality. Truly 5 stars.",
+    "rating": 5,
+    "dish": "Escalope de Veau & Soups",
+    "date": "November 2024"
+  },
+  {
+    "_id": "rev_007",
+    "name": "Dr. Aaron Mitchell",
+    "position": "Regular Patron & Club Member",
+    "avatar": "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?auto=format&fit=crop&w=250&q=80",
+    "details": "Online ordering is lightning fast and the packaging preserves the fine-dining temperature and presentation. Their Caesar Royale and Seafood Bisque are our family's weekly ritual!",
+    "rating": 5,
+    "dish": "Seafood Bisque & Caesar Royale",
+    "date": "October 2024"
+  },
+  {
+    "_id": "rev_008",
+    "name": "Nadia Chen",
+    "position": "Pastry Chef & Food Stylist",
+    "avatar": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=250&q=80",
+    "details": "The Belgium Chocolate Fondant with gold leaf and handcrafted raspberry coulis is pure decadence. As a pastry chef myself, I tip my hat to the culinary team.",
+    "rating": 5,
+    "dish": "Belgium Chocolate Fondant",
+    "date": "October 2024"
+  }
 ]

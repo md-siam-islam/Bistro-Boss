@@ -1,98 +1,200 @@
-import React from "react";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import { FaUtensils, FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaClock } from "react-icons/fa";
+import { FaFacebookF, FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa6";
+import Swal from "sweetalert2";
 
 const Footer = () => {
+  const [email, setEmail] = useState("");
+
+  const handleSubscribe = (e) => {
+    e.preventDefault();
+    if (!email) return;
+    Swal.fire({
+      icon: "success",
+      title: "Welcome to Bistro Boss Club",
+      text: "Thank you for subscribing! Check your inbox for your 15% VIP welcome voucher.",
+      confirmButtonColor: "#d97706",
+      background: "#0f172a",
+      color: "#fff",
+    });
+    setEmail("");
+  };
+
   return (
-    <div>
-      <footer className="footer bg-base-300 text-base-content p-10">
-        {/* Logo Section */}
-        <div>
-          <h1 className="font-bold text-2xl">
-            BISTRO <span className="text-[#FFA500]">BOOS</span>
-          </h1>
-          <p className="text-sm mt-2">
-            Delicious food served with love! <br />
-            Since 2023
-          </p>
-        </div>
-
-        {/* Navigation Links */}
-        <nav>
-          <h6 className="footer-title font-semibold text-lg">Company</h6>
-          <a className="link link-hover">Home</a>
-          <a className="link link-hover">Our Menu</a>
-          <a className="link link-hover">Our Shop</a>
-          <a className="link link-hover">Contact Us</a>
-        </nav>
-
-        {/* Contact Information */}
-        <div>
-          <h6 className="footer-title font-semibold text-lg">Contact</h6>
-          <p>Address: 123 Bistro St, Foodie City</p>
-          <p>Email: info@bistroboos.com</p>
-          <p>Phone: +123 456 7890</p>
-        </div>
-
-        {/* Social Links */}
-        <nav>
-          <h6 className="footer-title font-semibold text-lg">Follow Us</h6>
-          <div className="grid grid-flow-col gap-4">
-            <a>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                className="fill-current"
-              >
-                <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path>
-              </svg>
-            </a>
-            <a>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                className="fill-current"
-              >
-                <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"></path>
-              </svg>
-            </a>
-            <a>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                className="fill-current"
-              >
-                <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"></path>
-              </svg>
-            </a>
+    <footer className="bg-gradient-to-b from-[#0b0f19] via-[#080c14] to-black border-t border-amber-500/20 text-gray-300 pt-16 pb-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+          {/* Column 1: Brand & Identity */}
+          <div className="space-y-4">
+            <Link to="/" className="flex items-center gap-3 group">
+              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-amber-400 via-amber-500 to-amber-700 flex items-center justify-center shadow-lg shadow-amber-500/20">
+                <FaUtensils className="text-slate-950 text-lg" />
+              </div>
+              <div>
+                <span className="font-cinzel text-2xl font-bold tracking-widest text-white">
+                  BISTRO <span className="text-amber-400">BOSS</span>
+                </span>
+                <span className="block text-[10px] tracking-[0.25em] text-gray-400 uppercase font-sans">
+                  Fine Dining & Lounge
+                </span>
+              </div>
+            </Link>
+            <p className="text-gray-400 text-sm leading-relaxed">
+              Crafting unforgettable culinary memories since 2018. Where artisanal mastery meets organic local ingredients and unparalleled hospitality.
+            </p>
+            <div className="pt-2">
+              <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-semibold bg-amber-500/10 text-amber-400 border border-amber-500/30">
+                ⭐ Michelin Recommended 2025
+              </span>
+            </div>
           </div>
-        </nav>
 
-        {/* Subscription Section */}
-        <div>
-          <h6 className="footer-title font-semibold text-lg">Newsletter</h6>
-          <p>Subscribe to get the latest updates</p>
-          <div className="flex">
-            <input
-              type="email"
-              placeholder="Enter your email"
-              className="input input-bordered w-full max-w-xs"
-            />
-            <button className="btn btn-primary ml-2">Subscribe</button>
+          {/* Column 2: Navigation Links */}
+          <div>
+            <h4 className="font-cinzel text-lg font-bold text-white tracking-wider mb-6 flex items-center gap-2">
+              <span className="w-2 h-2 rounded-full bg-amber-400"></span>
+              EXPLORE
+            </h4>
+            <ul className="space-y-3 text-sm">
+              <li>
+                <Link to="/" className="text-gray-400 hover:text-amber-400 transition-colors flex items-center gap-2">
+                  <span className="text-amber-500/50">›</span> Home Sanctuary
+                </Link>
+              </li>
+              <li>
+                <Link to="/menu" className="text-gray-400 hover:text-amber-400 transition-colors flex items-center gap-2">
+                  <span className="text-amber-500/50">›</span> Artisanal Menu
+                </Link>
+              </li>
+              <li>
+                <Link to="/shop/salad" className="text-gray-400 hover:text-amber-400 transition-colors flex items-center gap-2">
+                  <span className="text-amber-500/50">›</span> Order Online
+                </Link>
+              </li>
+              <li>
+                <Link to="/contact" className="text-gray-400 hover:text-amber-400 transition-colors flex items-center gap-2">
+                  <span className="text-amber-500/50">›</span> Table Reservation
+                </Link>
+              </li>
+              <li>
+                <Link to="/login" className="text-gray-400 hover:text-amber-400 transition-colors flex items-center gap-2">
+                  <span className="text-amber-500/50">›</span> VIP Diner Portal
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Column 3: Contact & Hours */}
+          <div>
+            <h4 className="font-cinzel text-lg font-bold text-white tracking-wider mb-6 flex items-center gap-2">
+              <span className="w-2 h-2 rounded-full bg-amber-400"></span>
+              VISIT US
+            </h4>
+            <div className="space-y-3 text-sm text-gray-400">
+              <p className="flex items-start gap-3">
+                <FaMapMarkerAlt className="text-amber-400 mt-1 shrink-0" />
+                <span>124 Gourmet Boulevard, Culinary Quarter, Foodie Haven</span>
+              </p>
+              <p className="flex items-center gap-3">
+                <FaPhoneAlt className="text-amber-400 shrink-0" />
+                <a href="tel:+8801951737356" className="hover:text-amber-400 transition-colors">
+                  +880 1951-737356
+                </a>
+              </p>
+              <p className="flex items-center gap-3">
+                <FaEnvelope className="text-amber-400 shrink-0" />
+                <a href="mailto:concierge@bistroboss.com" className="hover:text-amber-400 transition-colors">
+                  concierge@bistroboss.com
+                </a>
+              </p>
+              <div className="pt-2 border-t border-gray-800">
+                <p className="flex items-start gap-3 text-xs text-gray-400">
+                  <FaClock className="text-amber-400 mt-0.5 shrink-0" />
+                  <span>
+                    Mon - Fri: 11:00 AM – 11:00 PM<br />
+                    Sat - Sun: 10:00 AM – 12:00 Midnight
+                  </span>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Column 4: Newsletter & Socials */}
+          <div>
+            <h4 className="font-cinzel text-lg font-bold text-white tracking-wider mb-6 flex items-center gap-2">
+              <span className="w-2 h-2 rounded-full bg-amber-400"></span>
+              GASTRONOMY CLUB
+            </h4>
+            <p className="text-sm text-gray-400 mb-4">
+              Subscribe for exclusive chef tasting invites, seasonal menu launches, and private sommelier notes.
+            </p>
+            <form onSubmit={handleSubscribe} className="space-y-2 mb-6">
+              <div className="relative">
+                <input
+                  type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  placeholder="Enter your email"
+                  required
+                  className="w-full px-4 py-2.5 bg-slate-900/90 border border-gray-700 rounded-xl text-sm text-white placeholder-gray-500 focus:outline-none focus:border-amber-400 transition"
+                />
+              </div>
+              <button
+                type="submit"
+                className="w-full py-2.5 bg-gradient-to-r from-amber-400 to-amber-600 text-slate-950 font-bold text-sm rounded-xl hover:shadow-lg hover:shadow-amber-500/25 transition-all duration-300"
+              >
+                Join VIP Club
+              </button>
+            </form>
+
+            {/* Social Icons */}
+            <div className="flex items-center gap-3">
+              <a
+                href="#facebook"
+                className="w-9 h-9 rounded-full bg-slate-900 border border-gray-800 flex items-center justify-center text-gray-400 hover:text-amber-400 hover:border-amber-400/50 hover:scale-110 transition-all"
+                aria-label="Facebook"
+              >
+                <FaFacebookF className="w-4 h-4" />
+              </a>
+              <a
+                href="#instagram"
+                className="w-9 h-9 rounded-full bg-slate-900 border border-gray-800 flex items-center justify-center text-gray-400 hover:text-amber-400 hover:border-amber-400/50 hover:scale-110 transition-all"
+                aria-label="Instagram"
+              >
+                <FaInstagram className="w-4 h-4" />
+              </a>
+              <a
+                href="#twitter"
+                className="w-9 h-9 rounded-full bg-slate-900 border border-gray-800 flex items-center justify-center text-gray-400 hover:text-amber-400 hover:border-amber-400/50 hover:scale-110 transition-all"
+                aria-label="Twitter"
+              >
+                <FaTwitter className="w-4 h-4" />
+              </a>
+              <a
+                href="#youtube"
+                className="w-9 h-9 rounded-full bg-slate-900 border border-gray-800 flex items-center justify-center text-gray-400 hover:text-amber-400 hover:border-amber-400/50 hover:scale-110 transition-all"
+                aria-label="YouTube"
+              >
+                <FaYoutube className="w-4 h-4" />
+              </a>
+            </div>
           </div>
         </div>
-      </footer>
 
-      {/* Footer Bottom Section */}
-      <div className="text-center bg-base-200 py-4">
-        <p>© 2025 Bistro Boos. All Rights Reserved.</p>
+        {/* Bottom Bar */}
+        <div className="pt-8 border-t border-gray-900 flex flex-col sm:flex-row items-center justify-between text-xs text-gray-500 gap-4">
+          <p>© {new Date().getFullYear()} Bistro Boss Restaurant & Bar. All Rights Reserved.</p>
+          <div className="flex items-center gap-6">
+            <a href="#privacy" className="hover:text-amber-400 transition-colors">Privacy Policy</a>
+            <a href="#terms" className="hover:text-amber-400 transition-colors">Terms of Dining</a>
+            <a href="#allergy" className="hover:text-amber-400 transition-colors">Allergen Information</a>
+          </div>
+        </div>
       </div>
-    </div>
+    </footer>
   );
 };
 
 export default Footer;
+

@@ -454,5 +454,205 @@
         "image": "https://cristianonew.ukrdevs.com/wp-content/uploads/2016/08/product-2-370x247.jpg",
         "category": "soup",
         "price": 10.5
+    },
+    {
+        "_id": "bistro_salad_01",
+        "name": "Truffle Burrata & Heirloom Salad",
+        "recipe": "Creamy Italian burrata, heirloom tomatoes, white truffle oil, 25-year aged balsamic drizzle, and fresh micro basil.",
+        "image": "https://images.unsplash.com/photo-1592417817098-8f3d6eb228cc?auto=format&fit=crop&w=600&q=80",
+        "category": "salad",
+        "price": 18.5
+    },
+    {
+        "_id": "bistro_salad_02",
+        "name": "Crispy Duck Niçoise Deluxe",
+        "recipe": "Shredded crispy confit duck, French green beans, quail eggs, kalamata olives, fingerling potatoes, Dijon emulsion.",
+        "image": "https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=600&q=80",
+        "category": "salad",
+        "price": 19.8
+    },
+    {
+        "_id": "bistro_salad_03",
+        "name": "Mediterranean Grilled Halloumi Salad",
+        "recipe": "Golden seared Cypriot halloumi, wild organic rocket, pomegranate jewels, toasted pine nuts, and mint-honey dressing.",
+        "image": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=600&q=80",
+        "category": "salad",
+        "price": 16.5
+    },
+    {
+        "_id": "bistro_salad_04",
+        "name": "Avocado & Wild Prawn Citrus Bowl",
+        "recipe": "Jumbo tiger prawns, Hass avocado slices, pink grapefruit segments, baby spinach, citrus lime vinaigrette.",
+        "image": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=600&q=80",
+        "category": "salad",
+        "price": 21
+    },
+    {
+        "_id": "bistro_pizza_01",
+        "name": "Truffle Wild Mushroom Bianca",
+        "recipe": "Fior di latte mozzarella, black truffle paste, wild chanterelle & cremini mushrooms, fresh thyme, and shaved parmesan.",
+        "image": "https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=600&q=80",
+        "category": "pizza",
+        "price": 24.5
+    },
+    {
+        "_id": "bistro_pizza_02",
+        "name": "Artisanal Prosciutto & Burrata Pizza",
+        "recipe": "San Marzano DOP tomato sauce, 24-month aged Parma prosciutto, whole burrata crown, baby arugula, extra virgin olive oil.",
+        "image": "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=600&q=80",
+        "category": "pizza",
+        "price": 26
+    },
+    {
+        "_id": "bistro_pizza_03",
+        "name": "Quattro Formaggi Con Miele",
+        "recipe": "Four artisan Italian cheeses (Gorgonzola Dolce, Fontina, Mozzarella, Pecorino Romano) drizzled with organic truffle honey.",
+        "image": "https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&w=600&q=80",
+        "category": "pizza",
+        "price": 22.5
+    },
+    {
+        "_id": "bistro_pizza_04",
+        "name": "Fire-Roasted Diavola Supreme",
+        "recipe": "Spicy Calabrian salami, house-pickled chili peppers, smoked mozzarella, fresh oregano, and roasted garlic confit.",
+        "image": "https://images.unsplash.com/photo-1628840042765-356cda07504e?auto=format&fit=crop&w=600&q=80",
+        "category": "pizza",
+        "price": 21.5
+    },
+    {
+        "_id": "bistro_pizza_05",
+        "name": "Smoked Salmon & Mascarpone Flatbread",
+        "recipe": "Crisp wood-fired dough, creamy lemon mascarpone, cured Scottish smoked salmon, fried capers, and fresh dill leaves.",
+        "image": "https://images.unsplash.com/photo-1534308983496-4fabb1a015ee?auto=format&fit=crop&w=600&q=80",
+        "category": "pizza",
+        "price": 25
+    },
+    {
+        "_id": "bistro_soup_01",
+        "name": "Lobster Bisque Royale",
+        "recipe": "Velvety slow-simmered Maine lobster broth with cognac, finished with fresh crème fraîche, lobster claw meat, and tarragon oil.",
+        "image": "https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=600&q=80",
+        "category": "soup",
+        "price": 22
+    },
+    {
+        "_id": "bistro_soup_02",
+        "name": "French Onion Soup Gratinée",
+        "recipe": "Caramelized sweet onions deglazed with red wine and rich beef consommé, crowned with sourdough baguette and melted Gruyère.",
+        "image": "https://images.unsplash.com/photo-1582878826629-29b7ad1cdc43?auto=format&fit=crop&w=600&q=80",
+        "category": "soup",
+        "price": 15.5
+    },
+    {
+        "_id": "bistro_soup_03",
+        "name": "Wild Forest Mushroom Cappuccino",
+        "recipe": "Earthy porcini & chanterelle mushroom broth topped with frothed truffle cream and house-baked rosemary breadsticks.",
+        "image": "https://images.unsplash.com/photo-1603105037880-880cd4edfb0d?auto=format&fit=crop&w=600&q=80",
+        "category": "soup",
+        "price": 14
+    },
+    {
+        "_id": "bistro_soup_04",
+        "name": "Velvety Butternut Squash & Sage Soup",
+        "recipe": "Roasted butternut squash, infused with toasted sage brown butter, coconut cream, roasted pumpkin seeds, and smoked paprika.",
+        "image": "https://images.unsplash.com/photo-1476718406336-bb5a9690ee2a?auto=format&fit=crop&w=600&q=80",
+        "category": "soup",
+        "price": 13.5
+    },
+    {
+        "_id": "bistro_dessert_01",
+        "name": "Gold Leaf Madagascar Vanilla Crème Brûlée",
+        "recipe": "Silky rich vanilla bean custard topped with a caramelized amber glass crust, decorated with 24k edible gold leaf and fresh berries.",
+        "image": "https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=600&q=80",
+        "category": "dessert",
+        "price": 15
+    },
+    {
+        "_id": "bistro_dessert_02",
+        "name": "Belgian Dark Chocolate Molten Lava Cake",
+        "recipe": "Warm 70% Callebaut dark chocolate cake with a molten truffle center, accompanied by artisanal Madagascar vanilla gelato.",
+        "image": "https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=600&q=80",
+        "category": "dessert",
+        "price": 16.5
+    },
+    {
+        "_id": "bistro_dessert_03",
+        "name": "Artisanal Sicilian Pistachio Tiramisu",
+        "recipe": "Espresso-soaked Savoiardi ladyfingers layered with Bronte pistachio mascarpone mousse and Valrhona cocoa dust.",
+        "image": "https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?auto=format&fit=crop&w=600&q=80",
+        "category": "dessert",
+        "price": 14.5
+    },
+    {
+        "_id": "bistro_dessert_04",
+        "name": "Salted Caramel Hazelnut Mille-Feuille",
+        "recipe": "Caramelized puff pastry layers, praline diplomat cream, fleur de sel salted butter caramel, and candied hazelnuts.",
+        "image": "https://images.unsplash.com/photo-1587314168485-3236d6710814?auto=format&fit=crop&w=600&q=80",
+        "category": "dessert",
+        "price": 15.5
+    },
+    {
+        "_id": "bistro_drinks_01",
+        "name": "Bistro Boss Golden Saffron Elixir",
+        "recipe": "Persian saffron infusion, cold-pressed Sicilian lemon, wildflower honey, sparkling mineral water, and 24k gold shimmer.",
+        "image": "https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=600&q=80",
+        "category": "drinks",
+        "price": 12
+    },
+    {
+        "_id": "bistro_drinks_02",
+        "name": "Smoked Rosemary Blood Orange Spritz",
+        "recipe": "Charred rosemary sprig, freshly squeezed Sicilian blood orange juice, Italian non-alcoholic bitter aperitivo, and club soda.",
+        "image": "https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=600&q=80",
+        "category": "drinks",
+        "price": 10.5
+    },
+    {
+        "_id": "bistro_drinks_03",
+        "name": "Artisanal Yuzu Passionfruit Fizz",
+        "recipe": "Japanese yuzu purée, tropical passionfruit pulp, fresh mint leaves, sparkling elderflower tonic, and crushed ice.",
+        "image": "https://images.unsplash.com/photo-1536935338788-846bb9981813?auto=format&fit=crop&w=600&q=80",
+        "category": "drinks",
+        "price": 11
+    },
+    {
+        "_id": "bistro_drinks_04",
+        "name": "Cold Brew Caramel Silk Latte",
+        "recipe": "18-hour cold brewed Ethiopian single origin beans, handcrafted burnt caramel syrup, and velvety oat milk foam.",
+        "image": "https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?auto=format&fit=crop&w=600&q=80",
+        "category": "drinks",
+        "price": 9.5
+    },
+    {
+        "_id": "bistro_popular_01",
+        "name": "Wagyu Ribeye Steak Au Poivre",
+        "recipe": "Grain-fed marble score 8+ Wagyu ribeye, cracked peppercorn crust, cognac cream reduction, duck fat truffle fries.",
+        "image": "https://images.unsplash.com/photo-1558030006-450675393462?auto=format&fit=crop&w=600&q=80",
+        "category": "popular",
+        "price": 48
+    },
+    {
+        "_id": "bistro_popular_02",
+        "name": "Pan-Seared Chilean Sea Bass",
+        "recipe": "Crispy skinned sea bass fillet, saffron cauliflower silk, braised baby leeks, and champagne citrus beurre blanc.",
+        "image": "https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?auto=format&fit=crop&w=600&q=80",
+        "category": "popular",
+        "price": 42
+    },
+    {
+        "_id": "bistro_popular_03",
+        "name": "King Prawn & Truffle Tagliolini",
+        "recipe": "Handmade fresh egg pasta, jumbo Mediterranean tiger prawns, garlic butter, fresh black truffle shavings, lemon zest.",
+        "image": "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=600&q=80",
+        "category": "popular",
+        "price": 34
+    },
+    {
+        "_id": "bistro_offered_01",
+        "name": "Herb-Crusted Colorado Lamb Rack",
+        "recipe": "Dijon herb crusted lamb cutlets, parsnip puree, glazed baby heirloom carrots, rosemary port wine reduction.",
+        "image": "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=600&q=80",
+        "category": "offered",
+        "price": 39.5
     }
 ]
