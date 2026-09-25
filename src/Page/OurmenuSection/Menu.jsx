@@ -20,7 +20,7 @@ const Menu = () => {
     return (
         <div className='w-11/12 mx-auto'>
             <Cover img={img} title={"our menu"}></Cover>
-            <Sheared Subtitle={"Dont miss"} title={"TODAY'S OFFER"}></Sheared>
+            <Sheared Subtitle={"Dont miss"} title={"TODAY OFFER"}></Sheared>
             <Menucategory items={dessert}></Menucategory>
             <Menucategory items={salad} img={saladImg} title={"salad"}></Menucategory>
             <Menucategory items={pizza} img={pizzaImg} title={"pizza"}></Menucategory>
