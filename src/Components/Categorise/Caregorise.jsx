@@ -14,16 +14,34 @@ import slider5 from "../../assets/home/slide5.jpg";
 
 const categories = [
   {
-    name: "Artisan Salads",
-    slug: "salad",
-    image: slider1,
-    desc: "Farm-fresh organic greens, burrata & truffle emulsions",
+    name: "Luxury Burgers",
+    slug: "burger",
+    image: "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=600&q=80",
+    desc: "A5 Japanese Wagyu blends, black truffle aioli & brioche",
+  },
+  {
+    name: "Artisan Pastas",
+    slug: "pasta",
+    image: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=600&q=80",
+    desc: "Hand-rolled ribbons, Maine lobster, and wild truffles",
+  },
+  {
+    name: "Grand Platters",
+    slug: "platter",
+    image: "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=600&q=80",
+    desc: "Tomahawk steaks & royal chilled ocean plateaus for sharing",
   },
   {
     name: "Wood-Fired Pizzas",
     slug: "pizza",
     image: slider2,
     desc: "Fermented sourdough crusts & San Marzano tomatoes",
+  },
+  {
+    name: "Artisan Salads",
+    slug: "salad",
+    image: slider1,
+    desc: "Farm-fresh organic greens, burrata & truffle emulsions",
   },
   {
     name: "Gourmet Soups",
@@ -35,13 +53,13 @@ const categories = [
     name: "Decadent Desserts",
     slug: "dessert",
     image: slider4,
-    desc: "Belgian lava cakes, crèmes brûlées & tiramisus",
+    desc: "24K gold lava domes, mille-feuilles & cheesecakes",
   },
   {
     name: "Handcrafted Drinks",
     slug: "drinks",
     image: slider5,
-    desc: "Infused mocktails, saffron elixirs & cold brews",
+    desc: "Smoked mocktails, saffron gold elixirs & cold brews",
   },
 ];
 
@@ -56,7 +74,7 @@ const Caregorise = () => {
       <div className="mt-12">
         <Swiper
           slidesPerView={1}
-          spaceBetween={24}
+          spaceBetween={20}
           pagination={{ clickable: true }}
           autoplay={{ delay: 3500, disableOnInteraction: false }}
           breakpoints={{
@@ -64,13 +82,13 @@ const Caregorise = () => {
             1024: { slidesPerView: 4, spaceBetween: 24 },
           }}
           modules={[Pagination, Autoplay]}
-          className="pb-14"
+          className="pb-16"
         >
           {categories.map((cat, index) => (
             <SwiperSlide key={index}>
               <Link
                 to={`/shop/${cat.slug}`}
-                className="group relative block h-[380px] rounded-2xl overflow-hidden border border-amber-500/20 shadow-xl transition-all duration-500 hover:border-amber-400 hover:shadow-gold-glow"
+                className="group relative block h-[400px] rounded-3xl overflow-hidden border border-amber-500/20 shadow-xl transition-all duration-500 hover:border-amber-400 hover:shadow-[0_20px_40px_rgba(245,158,11,0.25)] hover:-translate-y-2 bg-slate-900"
               >
                 {/* Background Food Image */}
                 <img
@@ -80,17 +98,17 @@ const Caregorise = () => {
                 />
 
                 {/* Dark Vignette Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/60 to-transparent"></div>
 
                 {/* Content Overlay */}
                 <div className="absolute bottom-0 inset-x-0 p-6 text-center">
-                  <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider bg-amber-500/20 text-amber-300 border border-amber-400/40 backdrop-blur-md mb-2">
-                    Gourmet Selection
+                  <span className="inline-block px-3.5 py-1 rounded-full text-[11px] font-bold uppercase tracking-wider bg-slate-950/85 text-amber-300 border border-amber-400/30 backdrop-blur-md mb-2.5">
+                    ✦ Gourmet Selection
                   </span>
-                  <h3 className="font-cinzel text-xl md:text-2xl font-bold text-white tracking-wide group-hover:text-amber-400 transition-colors">
+                  <h3 className="font-cinzel text-xl sm:text-2xl font-bold text-white tracking-wide group-hover:text-amber-400 transition-colors">
                     {cat.name}
                   </h3>
-                  <p className="text-gray-300 text-xs mt-2 line-clamp-2 font-light">
+                  <p className="text-gray-300 text-xs sm:text-sm mt-2 line-clamp-2 font-light">
                     {cat.desc}
                   </p>
                   <span className="inline-block mt-4 text-xs font-bold text-amber-400 tracking-widest uppercase group-hover:translate-x-1 transition-transform">
@@ -107,4 +125,3 @@ const Caregorise = () => {
 };
 
 export default Caregorise;
-

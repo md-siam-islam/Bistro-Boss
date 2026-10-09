@@ -8,6 +8,7 @@ import Home from "./Home/Home";
 import Menu from "./Page/OurmenuSection/Menu";
 import Shop from "./Page/Ourshopesection/Shop/Shop";
 import Contact from "./Page/ContactSection/Contact";
+import ProductDetails from "./Page/ProductDetails/ProductDetails";
 import Login from "./Page/Login/Login";
 import Authprovider from "./AuthProvider/Authprovider";
 import Signup from "./Page/SignupPage/Signup";
@@ -44,6 +45,10 @@ const router = createBrowserRouter([
       {
         path: "/shop/:category",
         element: <Shop></Shop>,
+      },
+      {
+        path: "/item/:id",
+        element: <ProductDetails></ProductDetails>,
       },
       {
         path: "/contact",

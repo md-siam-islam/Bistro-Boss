@@ -5,11 +5,11 @@ import Footer from "../Footer/Footer";
 
 const Main = () => {
   return (
-    <div className="bg-[#0b0f19] text-gray-100 min-h-screen flex flex-col justify-between selection:bg-amber-500 selection:text-white">
+    <div className="min-h-screen flex flex-col justify-between bg-[#080b11] text-gray-100 selection:bg-amber-500 selection:text-slate-950">
       <Navbar />
-      <div className="flex-1 w-full">
+      <main className="flex-1 w-full overflow-x-hidden">
         <Outlet />
-      </div>
+      </main>
       <Footer />
     </div>
   );

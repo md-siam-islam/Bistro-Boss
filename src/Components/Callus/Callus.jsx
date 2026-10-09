@@ -4,22 +4,22 @@ import { Link } from 'react-router-dom';
 
 const Callus = () => {
   return (
-    <section className="my-28 max-w-7xl mx-auto px-4">
-      <div className="relative rounded-3xl overflow-hidden bg-gradient-to-r from-slate-950 via-slate-900 to-slate-950 border border-amber-500/30 p-8 md:p-14 shadow-2xl">
-        {/* Subtle background glow */}
-        <div className="absolute top-0 right-1/4 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl pointer-events-none"></div>
+    <section className="w-full my-28 relative overflow-hidden bg-gradient-to-r from-[#05070a] via-slate-950 to-[#05070a] border-y border-amber-500/30 py-16 md:py-20 shadow-2xl">
+      {/* Background radial glow */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[300px] bg-amber-500/10 rounded-full blur-[120px] pointer-events-none"></div>
 
-        <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between gap-8 text-center lg:text-left">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-8 text-center lg:text-left">
           {/* Left Info */}
-          <div className="space-y-3">
-            <span className="inline-block text-xs font-bold tracking-[0.25em] text-amber-400 uppercase">
-              Immediate VIP Table Reservations & Inquiries
+          <div className="space-y-3 max-w-2xl">
+            <span className="inline-block text-xs font-bold tracking-[0.28em] text-amber-400 uppercase bg-amber-500/10 px-3.5 py-1 rounded-full border border-amber-400/30">
+              Immediate VIP Table Reservations & Private Dining
             </span>
             <h2 className="font-cinzel text-2xl sm:text-3xl md:text-4xl font-extrabold text-white tracking-wide">
-              Planning a Memorable Evening?
+              Planning an Unforgettable Evening?
             </h2>
-            <p className="text-gray-400 text-sm max-w-xl font-light">
-              Speak directly with our Maitre d' for private dining rooms, chef tasting menus, or bespoke anniversary reservations.
+            <p className="text-gray-300 text-sm md:text-base font-light">
+              Speak directly with our Concierge Maitre d' for private dining salons, bespoke chef tasting menus, or anniversary celebrations.
             </p>
           </div>
 
@@ -27,7 +27,7 @@ const Callus = () => {
           <div className="flex flex-col sm:flex-row items-center gap-4 shrink-0">
             <a
               href="tel:+8801951737356"
-              className="px-6 py-3.5 rounded-full font-bold text-slate-950 bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600 hover:shadow-xl hover:shadow-amber-500/30 hover:scale-105 transition-all duration-300 text-sm uppercase tracking-wider flex items-center gap-3"
+              className="px-8 py-4 rounded-full font-bold text-slate-950 bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600 hover:shadow-[0_0_25px_rgba(245,158,11,0.5)] hover:scale-105 transition-all duration-300 text-xs sm:text-sm uppercase tracking-wider flex items-center gap-3"
             >
               <div className="w-8 h-8 rounded-full bg-slate-950/20 flex items-center justify-center">
                 <FaPhoneAlt className="text-slate-950 text-xs" />
@@ -37,7 +37,7 @@ const Callus = () => {
 
             <Link
               to="/contact"
-              className="px-6 py-3.5 rounded-full font-semibold text-white bg-slate-900/90 border border-amber-500/40 hover:border-amber-400 hover:bg-amber-500/10 hover:scale-105 transition-all duration-300 text-sm uppercase tracking-wider flex items-center gap-2"
+              className="px-8 py-4 rounded-full font-semibold text-white bg-slate-900/90 border border-amber-500/40 hover:border-amber-400 hover:bg-amber-500/10 hover:scale-105 transition-all duration-300 text-xs sm:text-sm uppercase tracking-wider flex items-center gap-2 backdrop-blur-md"
             >
               <FaCalendarCheck className="text-amber-400" />
               <span>Book Table Online</span>
@@ -49,4 +49,4 @@ const Callus = () => {
   );
 };
 
-export default Callus;
+export default Callus;

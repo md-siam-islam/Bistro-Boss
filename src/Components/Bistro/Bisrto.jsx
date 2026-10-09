@@ -4,14 +4,14 @@ import { FaAward, FaCrown, FaUtensils } from 'react-icons/fa';
 
 const Bisrto = () => {
   return (
-    <section className="my-28 relative rounded-3xl overflow-hidden border border-amber-500/20 shadow-2xl bg-img bg-cover bg-center bg-fixed min-h-[550px] flex items-center justify-center p-6 md:p-12">
-      {/* Dark Ambient Vignette */}
-      <div className="absolute inset-0 bg-slate-950/80 backdrop-blur-xs"></div>
+    <section className="w-full my-28 relative border-y border-amber-500/20 shadow-2xl bg-img bg-cover bg-center bg-fixed min-h-[580px] flex items-center justify-center px-4 py-16 md:py-24">
+      {/* Dark Ambient Vignette across 100% screen width */}
+      <div className="absolute inset-0 bg-[#080b11]/80 backdrop-blur-[2px]"></div>
 
-      {/* Luxury Glass Story Card */}
-      <div className="relative z-10 max-w-4xl mx-auto bg-slate-950/85 backdrop-blur-xl border border-amber-500/30 rounded-3xl p-8 md:p-14 text-center shadow-gold-glow">
+      {/* Luxury Glass Story Card Centered */}
+      <div className="relative z-10 max-w-4xl mx-auto bg-[#080b11]/85 backdrop-blur-xl border border-amber-500/30 rounded-3xl p-8 md:p-14 text-center shadow-[0_0_40px_rgba(245,158,11,0.2)]">
         {/* Crown Icon */}
-        <div className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-gradient-to-br from-amber-400 to-amber-700 text-slate-950 text-2xl shadow-lg shadow-amber-500/30 mb-6">
+        <div className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-gradient-to-br from-amber-400 via-amber-500 to-amber-700 text-slate-950 text-2xl shadow-[0_0_20px_rgba(245,158,11,0.35)] mb-6">
           <FaCrown />
         </div>
 
@@ -33,12 +33,12 @@ const Bisrto = () => {
           <div className="flex flex-col items-center">
             <FaAward className="text-amber-400 text-xl mb-1" />
             <span className="text-white font-bold text-sm">Triple Gold Culinary Award</span>
-            <span className="text-gray-400 text-xs">Excellence in Gastronomy 2024</span>
+            <span className="text-gray-400 text-xs">Excellence in Gastronomy</span>
           </div>
           <div className="flex flex-col items-center">
             <FaUtensils className="text-amber-400 text-xl mb-1" />
             <span className="text-white font-bold text-sm">Farm-to-Table Fresh</span>
-            <span className="text-gray-400 text-xs">100% Organic Local Suppliers</span>
+            <span className="text-gray-400 text-xs">100% Organic Terroir</span>
           </div>
           <div className="flex flex-col items-center">
             <FaCrown className="text-amber-400 text-xl mb-1" />
@@ -50,7 +50,7 @@ const Bisrto = () => {
         {/* CTA Button */}
         <Link
           to="/menu"
-          className="inline-flex items-center gap-2 px-8 py-3.5 rounded-full font-bold text-slate-950 bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600 hover:shadow-xl hover:shadow-amber-500/30 hover:scale-105 transition-all duration-300 text-sm uppercase tracking-wider"
+          className="inline-flex items-center gap-2 px-8 py-3.5 rounded-full font-bold text-slate-950 bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600 hover:shadow-[0_0_25px_rgba(245,158,11,0.5)] hover:scale-105 transition-all duration-300 text-xs sm:text-sm uppercase tracking-wider"
         >
           Discover Our Story & Menu
         </Link>
@@ -59,4 +59,4 @@ const Bisrto = () => {
   );
 };
 
-export default Bisrto;
+export default Bisrto;

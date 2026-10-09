@@ -10,17 +10,40 @@ import Testimonials from '../Components/TEstimonial/Testimonials';
 
 const Home = () => {
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+    <div className="w-full overflow-x-hidden">
+      {/* 1. Full-Width Hero Carousel */}
       <Banner />
-      <Caregorise />
+
+      {/* 2. Order By Category */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <Caregorise />
+      </div>
+
+      {/* 3. Full-Width Bistro Boss Heritage & Story */}
       <Bisrto />
-      <Popularitem />
+
+      {/* 4. Popular Artisanal Menu */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <Popularitem />
+      </div>
+
+      {/* 5. Full-Width Call Us & VIP Booking Banner */}
       <Callus />
-      <Recomends />
+
+      {/* 6. Chef Recommends */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <Recomends />
+      </div>
+
+      {/* 7. Full-Width Seasonal Gastronomy Spotlight */}
       <Featuredsection />
-      <Testimonials />
+
+      {/* 8. Valued Guest Testimonials */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <Testimonials />
+      </div>
     </div>
   );
 };
 
-export default Home;
+export default Home;
