@@ -190,6 +190,42 @@
   cursor: pointer !important;
 }
 
+/* 3D Center Slide Highlight Effect matching user mockup */
+.testimonial-swiper {
+  overflow: visible !important;
+}
+
+.testimonial-swiper .swiper-slide {
+  transition: transform 0.45s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.45s ease;
+  transform: scale(0.9);
+  opacity: 0.65;
+}
+
+.testimonial-swiper .swiper-slide-active {
+  transform: scale(1.06);
+  opacity: 1;
+  z-index: 30;
+}
+
+.testimonial-swiper .swiper-slide-active .testimonial-card {
+  box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.5), 0 0 25px rgba(245, 158, 11, 0.25);
+  border-color: rgba(245, 158, 11, 0.45);
+}
+
+.testimonial-pagination {
+  position: static !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
+  width: auto !important;
+}
+
+.testimonial-pagination .swiper-pagination-bullet {
+  margin: 0 !important;
+  cursor: pointer !important;
+}
+
 /* Animations */
 @keyframes fadeIn {
   from {

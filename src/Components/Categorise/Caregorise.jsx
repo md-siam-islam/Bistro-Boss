@@ -114,9 +114,9 @@ const Caregorise = () => {
                 {/* Content Overlay */}
                 <div className="absolute bottom-0 inset-x-0 p-6 text-center">
                   <span className="inline-block px-3.5 py-1 rounded-full text-[11px] font-bold uppercase tracking-wider bg-slate-950/85 text-amber-300 border border-amber-400/30 backdrop-blur-md mb-2.5">
-                    ✦ Gourmet Selection
+                    ✦ Gourmet Selection ✦
                   </span>
-                  <h3 className="font-cinzel text-xl sm:text-2xl font-bold text-white tracking-wide group-hover:text-amber-400 transition-colors">
+                  <h3 className="font-cinzel text-[20px] sm:text-2xl font-bold text-white tracking-wide group-hover:text-amber-400 transition-colors">
                     {cat.name}
                   </h3>
                   <p className="text-gray-300 text-xs sm:text-sm mt-2 line-clamp-2 font-light">
