@@ -2,9 +2,11 @@ import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
-import { Pagination, Autoplay } from "swiper/modules";
+import "swiper/css/navigation";
+import { Pagination, Autoplay, Navigation } from "swiper/modules";
 import { Link } from "react-router-dom";
 import Sheared from "../../ShearedSEction/Sheared";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
 import slider1 from "../../assets/home/slide1.jpg";
 import slider2 from "../../assets/home/slide2.jpg";
@@ -66,23 +68,32 @@ const categories = [
 const Caregorise = () => {
   return (
     <section className="my-24">
+      {/* Title - strictly in 1 single line */}
       <Sheared
         Subtitle="Curated Culinary Journey"
         title="ORDER BY CATEGORY"
       />
 
-      <div className="mt-12">
+      <div className="mt-12 relative">
+        {/* Swiper Slider */}
         <Swiper
           slidesPerView={1}
           spaceBetween={20}
-          pagination={{ clickable: true }}
+          navigation={{
+            prevEl: ".category-swiper-prev",
+            nextEl: ".category-swiper-next",
+          }}
+          pagination={{
+            clickable: true,
+            el: ".category-swiper-pagination",
+          }}
           autoplay={{ delay: 3500, disableOnInteraction: false }}
           breakpoints={{
             640: { slidesPerView: 2, spaceBetween: 20 },
             1024: { slidesPerView: 4, spaceBetween: 24 },
           }}
-          modules={[Pagination, Autoplay]}
-          className="pb-16"
+          modules={[Pagination, Autoplay, Navigation]}
+          className="w-full"
         >
           {categories.map((cat, index) => (
             <SwiperSlide key={index}>
@@ -119,6 +130,28 @@ const Caregorise = () => {
             </SwiperSlide>
           ))}
         </Swiper>
+
+        {/* Navigation Arrows & Pagination Controls placed completely BELOW the cards */}
+        <div className="flex items-center justify-center gap-5 mt-10">
+          <button
+            className="category-swiper-prev w-11 h-11 rounded-full bg-slate-900 border border-amber-500/30 text-amber-400 hover:bg-gradient-to-r hover:from-amber-400 hover:to-amber-600 hover:text-slate-950 hover:border-transparent transition-all duration-300 flex items-center justify-center shadow-lg hover:scale-110 active:scale-95 cursor-pointer disabled:opacity-30 disabled:pointer-events-none"
+            aria-label="Previous Category"
+            title="Previous Category"
+          >
+            <FaChevronLeft className="text-sm" />
+          </button>
+
+          {/* Centered Pagination Indicators */}
+          <div className="category-swiper-pagination flex items-center justify-center gap-2"></div>
+
+          <button
+            className="category-swiper-next w-11 h-11 rounded-full bg-slate-900 border border-amber-500/30 text-amber-400 hover:bg-gradient-to-r hover:from-amber-400 hover:to-amber-600 hover:text-slate-950 hover:border-transparent transition-all duration-300 flex items-center justify-center shadow-lg hover:scale-110 active:scale-95 cursor-pointer disabled:opacity-30 disabled:pointer-events-none"
+            aria-label="Next Category"
+            title="Next Category"
+          >
+            <FaChevronRight className="text-sm" />
+          </button>
+        </div>
       </div>
     </section>
   );

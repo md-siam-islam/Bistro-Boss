@@ -43,11 +43,11 @@ const Footer = () => {
             <p className="text-gray-400 text-sm leading-relaxed">
               Crafting unforgettable culinary memories since 2018. Where artisanal mastery meets organic local terroir and unparalleled hospitality.
             </p>
-            <div className="pt-2">
-              <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-semibold bg-amber-500/10 text-amber-300 border border-amber-400/30">
-                ✦ Michelin Star Recognition · Farm to Table
+            {/* <div className="pt-2">
+              <span className="inline-flex items-center gap-2 px-8 py-2 rounded-full text-[10px] font-semibold bg-amber-500/10 text-amber-300 border border-amber-400/30">
+                ✦ Michelin Star Recognition-Farm to Table ✦
               </span>
-            </div>
+            </div> */}
           </div>
 
           {/* Column 2: Navigation Links */}
